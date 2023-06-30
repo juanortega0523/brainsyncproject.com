@@ -45,7 +45,8 @@ u{text-decoration-color:#CB0000;cursor:pointer}
 }
 
 .img-headline {
-  width: 55%;
+  width: 65%;
+  margin-bottom: 2em;
 }
 
 .container{width:100%;max-width:600px;margin:0 auto;position:relative;z-index:1}
