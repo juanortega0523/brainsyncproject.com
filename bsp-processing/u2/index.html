@@ -54,6 +54,7 @@
         <div style="color: white; padding: 17px 0 15px 0;">
           <center>
             <h1 class="font-bold text-2xl mb-3">Don't close this page...</h1>
+            <div class="progress-bar0 mb-4" id="progress-bar0" data-status="0%" aria-label="Progress bar."></div>
             <p>PHASE 3 OF 4: <br>Warning! Do not shut or refresh this page. This could result in problems with your order.</p>
           </center>
         </div>
@@ -119,7 +120,7 @@
         <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex justify-center items-center">
 
           <!-- HOTMART - Upsell Widget -->
-          <div id="box_hotmart"></div>
+          <div id="box_hotmart" class="w-full"></div>
           <script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
 
           <script>
@@ -163,6 +164,46 @@
         Copyright © BrainSync Project. 2023
       </p>
     </footer>
+
+
+    <script type="text/javascript">
+      const progressBar = document.getElementById("progress-bar0");
+      let statusVal = 0;
+      let id = null;
+      let speed = 50;
+
+      id = setInterval(() => {
+        updateProgressBar();
+      }, speed);
+
+      function updateProgressBar() {
+        const isMaxVal = statusVal === 65;
+
+         if (isMaxVal) {
+          clearInterval(id);
+          // statusVal = 0;
+
+          return setTimeout(() => {
+            id = setInterval(() => {
+              updateProgressBar();
+            }, speed);
+          }, 2000);
+        }
+
+        statusVal++;
+        progressBar.dataset.status = "Your order is at " + statusVal + "%";
+        // progressBar.style.width = statusVal + "%";
+        // progressBar.after.style.width = statusVal + "%";
+        // progressBar.setAttribute(
+        //   "style",
+        //   `width: ${statusVal}%;`
+        // );
+        progressBar.setAttribute(
+        "style",
+        `--__progress-bar__status_wh: ${statusVal}%;`
+        );
+      }
+    </script>
 
 
     <!-- <div id="countdown"><span>16</span> min <span>30</span> sec</div> -->
