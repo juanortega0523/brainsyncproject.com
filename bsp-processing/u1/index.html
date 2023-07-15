@@ -212,11 +212,11 @@
     </script>
 
 
-    <div id="countdown"><span>16</span> min <span>30</span> sec</div>
+    <!-- <div id="countdown"><span>16</span> min <span>30</span> sec</div> -->
     <script>var target_date = new Date().getTime() + (1000*60*4) + 17; // set the countdown date
       var days, hours, minutes, seconds; // variables for time units
 
-      var countdown = document.getElementById("countdown"); // get tag element
+      // var countdown = document.getElementById("countdown"); // get tag element
 
       getCountdown();
 
@@ -245,7 +245,7 @@
         }
 
         // format countdown string + set tag value
-        countdown.innerHTML = "<span>" + minutes + "</span> min <span>" + seconds + "</span> sec";
+        // countdown.innerHTML = "<span>" + minutes + "</span> min <span>" + seconds + "</span> sec";
       }
 
       function pad(n) {
