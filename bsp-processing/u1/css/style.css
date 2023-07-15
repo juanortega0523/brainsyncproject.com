@@ -26,6 +26,10 @@ u{text-decoration-color:yellow;cursor:pointer}
   border: 5px solid white !important;
 }
 
+#hid, #hid2, #hid3, #hid4 {
+  display: none;
+}
+
 .img-headline {
   width: 100%;
 }
