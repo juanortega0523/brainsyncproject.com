@@ -17,3 +17,24 @@ img {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+.is-16by9{
+  aspect-ratio: 16/9;
+}
+
+.is-9by13{
+  aspect-ratio: 9/13;
+}
+
+.lesson:hover > .hidden {
+  display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .mobile-pdf{
+    aspect-ratio: unset !important;
+    width: 100%;
+    height: 70vh;
+  }
+}
