@@ -1,0 +1,112 @@
+
+/* disable select */
+
+.unselectable {
+-moz-user-select:none;
+-webkit-user-select:none;
+cursor: default;
+}
+
+html {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/*  */
+
+#section1 {
+  background: url('../img/BG1-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+#section2 {
+  background: url('../img/BG-OFERTA-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+#section3 {
+  background: url('../img/BG-FAQ-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #section1 {
+    background: url('../img/BG1-MOBILE.webp') no-repeat center;
+    background-size: cover;
+  }
+
+  #section2 {
+    background: url('../img/BG-OFERTA-MOBILE.webp') no-repeat center;
+    background-size: cover;
+  }
+
+  #section3 {
+    background: url('../img/BG-FAQ-MOBILE.webp') no-repeat center;
+    background-size: cover;
+  }
+}
+
+
+/* SETA DOWN */
+
+.scroll-down div {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0px auto 0px auto;
+}
+
+.scroll-down div span {
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-animation: seta_down 1.5s infinite;
+    animation: seta_down 2.0s infinite;
+    box-sizing:border-box
+}
+
+@-webkit-keyframes seta_down {
+    0% {
+        transform: rotate(-45deg) translate(0px, 0px);
+        opacity:0
+    }
+
+    50% {
+        opacity:1
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-30px, 30px);
+        opacity:0
+    }
+}
+
+@keyframes seta_down {
+    0% {
+        transform: rotate(-45deg) translate(0px, 0px);
+        opacity:0
+    }
+
+    50% {
+        opacity:1
+    }
+
+    100% {
+        transform: rotate(-45deg) translate(-30px, 30px);
+        opacity:0
+    }
+}
