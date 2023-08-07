@@ -1,4 +1,4 @@
-// 
+//
 // var geo_city = "";
 // var geo_countryCode = "";
 //
@@ -21,8 +21,8 @@ var sck = new URL(document.location).searchParams.get("sck");
 
 function redirect() {
 
-  var pid = "H84139988B";
-  var off = "";
+  var pid = "T84852144P";
+  var off = "rdg8or9j";
   location.href = "https://pay.hotmart.com/" + pid +
-    "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
+    "?off=" + off + "&checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
 }
