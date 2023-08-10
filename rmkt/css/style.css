@@ -33,6 +33,22 @@ u{text-decoration-color:#CB0000;cursor:pointer}
   box-shadow: 0px 5px 15px 4px rgba(157, 113, 12, 0.1) !important;
 }
 
+#section1 {
+  background: url('../img/BG1-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+#section2 {
+  background: url('../img/BG-OFERTA-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+#section3 {
+  background: url('../img/BG-FAQ-DESK.webp') no-repeat center;
+  background-size: cover;
+}
+
+
 .video .video-header {
   background: rgba(157, 113, 12, 0.67);
   border-top-right-radius: 5px;
@@ -202,6 +218,8 @@ footer p a{text-decoration:underline}
   margin: 0;
 }
 
+
+
 .cta small{
   -webkit-font-smoothing: antialiased;
     text-align: center;
@@ -214,118 +232,101 @@ footer p a{text-decoration:underline}
     z-index: 1;
     margin: 0.5em 0 -0.5em;
     font-size: 15px;
-    color: #f5e051;
+    color: #F5E051;
     font-weight: 700;
     text-shadow: #000 0 1px 0;
     line-height: 1.1em;
 }
-
 .cta {
-    background: linear-gradient(315deg, #ff8d08, #ff6600, #ff8d08, #ff6600);
+    background: linear-gradient(315deg, #FF1316, #D60B0D, #FF1316, #D60B0D);
     background-size: 500% 500%;
     -webkit-animation: cta2 6s ease infinite;
     -moz-animation: cta2 6s ease infinite;
     -o-animation: cta2 6s ease infinite;
     animation: cta2 6s ease infinite;
-    border-bottom: 6px #a96706 solid ;
-
-    text-shadow: #000 0 1px 0;
-
-    width: 95% !important;
+    border-bottom: 0px #1A73B5 solid ;
+    text-shadow: #000 0 0px 0;
+    width: auto !important;
     font-size: 1.6em;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    padding: 22px 20px;
-    margin: 8px auto 0;
+    padding: 1em 3em;
+    margin: 20px auto 0;
     box-sizing: border-box;
     color: #fff;
-
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 0.4em;
     display: block;
     font-family: sans-serif;
     line-height: 36px;
     /* font-size: 24px; */
     /* font-weight: bold; */
-
     outline: none;
     border-top: 0;
     border-left: 0;
     border-right: 0;
-}
 
+    line-height: 1;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
 .cta:hover, .cta:focus {
     color: #fff !important;
-    background-image: linear-gradient(to bottom, #ff8d08 0%, #ff6600 100%) !important;
+    background-image: linear-gradient(to bottom, #FF1316 0%, #D60B0D 100%) !important;
     /* text-decoration:underline; */
 }
-
-a.linkCheckout{
-  text-decoration: underline;
-  margin-top: 10px !important;
-  cursor: pointer;
-  display: block;
-  color: #ff0000;
-}
-
-
+@media only screen and (max-width: 768px) {
+  .cta{
+    font-size: 1em;
+    padding: 10px 15px;
+    max-width: 95%;
+  }
+  }
 @-webkit-keyframes cta2 {
     0% {
         background-position:0% 50%
     }
-
     50% {
         background-position:100% 51%
     }
-
     100% {
         background-position:0% 50%
     }
 }
-
 @-moz-keyframes cta2 {
     0% {
         background-position:0% 50%
     }
-
     50% {
         background-position:100% 51%
     }
-
     100% {
         background-position:0% 50%
     }
 }
-
 @-o-keyframes cta2 {
     0% {
         background-position:0% 50%
     }
-
     50% {
         background-position:100% 51%
     }
-
     100% {
         background-position:0% 50%
     }
 }
-
 @keyframes cta2 {
     0% {
         background-position:0% 50%
     }
-
     50% {
         background-position:100% 51%
     }
-
     100% {
         background-position:0% 50%
     }
 }
-
 
 
 
