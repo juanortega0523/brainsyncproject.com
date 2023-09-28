@@ -21,7 +21,7 @@ var sck = new URL(document.location).searchParams.get("sck");
 
 function redirect() {
 
-  var pid = "H84139988B";
+  var pid = "S84803235P";
   var off = "";
   location.href = "https://pay.hotmart.com/" + pid +
     "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
