@@ -39,13 +39,13 @@ u{text-decoration-color:#CB0000;cursor:pointer}
 }
 
 #section2 {
-  background: url('../img/BG-OFERTA-DESK.webp') no-repeat center;
-  background-size: cover;
+  /* background: url('../img/BG-OFERTA-DESK.webp') no-repeat center;
+  background-size: cover; */
 }
 
 #section3 {
-  background: url('../img/BG-FAQ-DESK.webp') no-repeat center;
-  background-size: cover;
+  /* background: url('../img/BG-FAQ-DESK.webp') no-repeat center;
+  background-size: cover; */
 }
 
 
@@ -326,6 +326,31 @@ footer p a{text-decoration:underline}
     100% {
         background-position:0% 50%
     }
+}
+
+
+@-webkit-keyframes effectPulsate {
+  from { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+@-moz-keyframes effectPulsate {
+  from { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+@-o-keyframes effectPulsate {
+  from { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  to { transform: scale(1); }
+}
+
+@keyframes effectPulsate {
+  from { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  to { transform: scale(1); }
 }
 
 

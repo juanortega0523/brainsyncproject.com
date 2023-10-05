@@ -4,10 +4,10 @@ var i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    this.classList.toggle("bg-gradient-to-r");
-    this.classList.toggle("from-violet-500");
-    this.classList.toggle("via-pink-500");
-    this.classList.toggle("to-yellow-300");
+    // this.classList.toggle("bg-gradient-to-r");
+    // this.classList.toggle("from-[#fee5a1]");
+    // this.classList.toggle("to-[#cca05e]");
+    // this.classList.toggle("hover:text-black");
     this.classList.toggle("shadow");
 
     // console.log(this.firstChild.nextElementSibling);
