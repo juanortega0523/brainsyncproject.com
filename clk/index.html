@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>BrainSync Project</title>
 
-    <script src="https://cdn.cloakup.me/checker.js" data-campaign="8e1c123c6746bb6f4797e810b03a6f85.64ba9dd3dc18c454b9f1720a13c184983a7e447d0fc4419e88ed61dffb3d18206786b66e63a05581b0db1fd2083a612dbf032ed806368f85643b7c616cdbc5abe2ab3a3921e3"></script>
+    <script src="https://cdn.cloakup.me/checker.js" data-campaign="f1b0a9051789924471c0a5f9c7f9fdc2.6262e134cfc1a2bb1ab46ca8b7dc906b0e6748d89bcf2ff81b327eaf9ee5452909fb7557efbb1cec019b3999502e1b03703055af546be3b44ded4873f370e23770b7864df50f"></script>
 
   </head>
   <body>
-    <h1>TESTE</h1>
+    <style>
+        body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #000;
+        }
+
+        .donut {
+        width: 2rem;
+        height: 2rem;
+        margin: 2rem;
+        border-radius: 50%;
+        border: 0.3rem solid rgba(151, 159, 208, 0.3);
+        border-top-color: #979fd0;
+        -webkit-animation: 1.5s spin infinite linear;
+                animation: 1.5s spin infinite linear;
+        }
+        .donut.multi {
+        border-bottom-color: #979fd0;
+        }
+
+        @-webkit-keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+        }
+
+        @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+        }
+    </style>
+
+    <div class="donut"></div>
+
   </body>
 </html>
