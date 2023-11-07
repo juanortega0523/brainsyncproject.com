@@ -10,7 +10,7 @@ textarea:focus, input:focus{
 
 *{color:inherit;box-sizing:border-box;text-rendering:optimizeLegibility;font-family: sans-serif}
 
-body{margin:0;background:#000;color:white;}
+body{margin:0;background:white;color:black;}
 
 a,b,u,i,span{font-family:inherit}
 
