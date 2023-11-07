@@ -25,7 +25,7 @@ function redirect() {
   // location.href = "https://pay.hotmart.com/" + pid +
   //   "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
 
-  location.href = "https://www.checkout-ds24.com/product/524297/?ds24tr" + sck;
+  location.href = "https://www.checkout-ds24.com/product/524297/?ds24tr=" + sck;
 
 
   // if (geo_countryCode == 'GB') {
