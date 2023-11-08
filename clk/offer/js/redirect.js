@@ -32,7 +32,7 @@ function redirect() {
     'AU' || geo_countryCode == 'NZ' || geo_countryCode == 'IN' ||
     geo_countryCode == 'ZA' || geo_countryCode == 'MX') {
     location.href =
-      "https://pay.hotmart.com/Q88210954P?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
+      "https://pay.hotmart.com/W88283844Y?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
       sck;
     //senna
   } else {
