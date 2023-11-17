@@ -88,24 +88,15 @@
         <p class="text-3xl font-bold text-center mb-2">Gain instant access to <span class="text-yellow-500">The Harmonic Resonance Heart Method.</span></p>
         <p class="text-xl font-medium text-center italic mt-3">Simply click the button below, and it will be added to your order.</p>
 
-        <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex justify-center items-center">
+        <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex flex-col justify-center items-center">
 
-          <!-- HOTMART - Upsell Widget -->
-          <div id="box_hotmart"></div>
-          <script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
+          <digistore-upsell-button class="cta" template="light">YES! I WANT THIS UPGRADE</digistore-upsell-button>
+          <script src="https://www.digistore24.com/service/digistore.js"></script><script>digistoreUpsell()</script>
 
-          <script>
-          opts = {
-          key: 'USL-105802-323164-5fb4f372037528c4c5c7a22194ec6326',
-          width: '650' ,
-          height: '420'
-          };
-          Upsell.Widget.show(opts);
-          </script>
-          <!-- HOTMART - Upsell Widget [end] -->
-
-
-
+          <br>
+          <center>
+            <a href="../u2/index.html" class="linkCheckout" style="color:grey;">No, thanks.</a>
+          </center>
 
 
         </div>
