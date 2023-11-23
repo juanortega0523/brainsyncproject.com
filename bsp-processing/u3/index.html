@@ -61,9 +61,10 @@
       <div class="wrapper">
         <div style="color: white; padding: 17px 0 15px 0;">
           <center>
-            <h1 class="font-bold text-2xl mb-3">Leaving this page or using the back option might limit your access to the complete content.</h1>
+            <!-- <h1 class="font-bold text-2xl mb-3">Leaving this page or using the back option might limit your access to the complete content.</h1> -->
+            <h1 class="font-bold text-2xl mb-3">If you close this page you may not see it again.</h1>
 
-            <div class="progress-bar0" id="progress-bar0" data-status="0%" aria-label="Progress bar."></div>
+            <!-- <div class="progress-bar0" id="progress-bar0" data-status="0%" aria-label="Progress bar."></div> -->
 
 
           </center>
@@ -229,21 +230,21 @@
     <footer>
       <br>
       <p>
-        <!-- <a href="../policy/index.html" target="_blank">Privacy de Policy</a>
-        | <a href="../terms/index.html" target="_blank">Terms of Use</a>
-        <br> -->
+        <a href="../../policy/index.html" target="_blank">Privacy de Policy</a>
+        | <a href="../../legal/index.html" target="_blank">Legal Notice</a>
+        <br>
         Copyright © BrainSync Project. 2023
       </p>
     </footer>
 
     <script type="text/javascript">
-      const progressBar = document.getElementById("progress-bar0");
+      // const progressBar = document.getElementById("progress-bar0");
       let statusVal = 0;
       let id = null;
       let speed = 50;
 
       id = setInterval(() => {
-        updateProgressBar();
+        // updateProgressBar();
       }, speed);
 
       function updateProgressBar() {
