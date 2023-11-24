@@ -27,10 +27,7 @@ function redirect() {
 
   // location.href = "https://www.checkout-ds24.com/product/524297/?ds24tr=" + sck;
 
-
-  if (geo_countryCode == 'US' || geo_countryCode == 'CA' || geo_countryCode ==
-    'AU' || geo_countryCode == 'NZ' || geo_countryCode == 'IN' ||
-    geo_countryCode == 'ZA' || geo_countryCode == 'MX') {
+  if (geo_countryCode == 'US') {
     location.href =
       "https://pay.hotmart.com/W88283844Y?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
       sck;
@@ -41,4 +38,18 @@ function redirect() {
       "https://pay.hotmart.com/H88208936H?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
       sck;
   }
+
+  // if (geo_countryCode == 'US' || geo_countryCode == 'CA' || geo_countryCode ==
+  //   'AU' || geo_countryCode == 'NZ' || geo_countryCode == 'IN' ||
+  //   geo_countryCode == 'ZA' || geo_countryCode == 'MX') {
+  //   location.href =
+  //     "https://pay.hotmart.com/W88283844Y?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
+  //     sck;
+  //   //senna
+  // } else {
+  //   //dumont
+  //   location.href =
+  //     "https://pay.hotmart.com/H88208936H?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
+  //     sck;
+  // }
 }
