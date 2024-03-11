@@ -55,6 +55,15 @@
     <link rel="dns-prefetch" href="https://api.vturb.com.br">
 
 
+    <!-- BG tracking Code -->
+
+    <script>var mysrc = "https://tracking.buygoods.com/track/?a=9069&firstcookie=0"+"&tracking_redirect=&referrer="+encodeURIComponent(document.referrer)+"&sessid2="+ReadCookie('sessid2')+"&product=gat1u&vid1=&vid2=&vid3=&caller_url="+encodeURIComponent(window.location.href); if(typeof add_to_cart !== 'undefined') { mysrc = mysrc+'&add_to_cart='+add_to_cart; } var newScript = document.createElement('script'); newScript.type = 'text/javascript'; newScript.defer = true; newScript.src = mysrc; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(newScript, s); function ReadCookie(name){name += '='; var parts = document.cookie.split(/;\s*/);for (var i = 0; i < parts.length; i++) {var part = parts[i]; if (part.indexOf(name) == 0) return part.substring(name.length)} return '';}</script>
+
+    <script type="text/javascript">var i = document.createElement("iframe"),oid = new URLSearchParams(window.location.search);i.async = true;i.style="display:none";i.setAttribute("src", "https://buygoods.com/affiliates/go/conversion/iframe/bg?a=9069&t=df839ac361af9d071b0acd6b87111cdb&conversion=1&s="+ReadCookie('sessid2')+"&o="+oid.get('order_id_global')+"&ut="+oid.get('token'));document.body.appendChild(i);</script>
+
+    <!-- End BG tracking Code -->
+
+
   </head>
   <body>
     <section id="navbar">
@@ -93,7 +102,7 @@
 
         <div class="flex flex-col justify-center mt-6">
           <p class="text-xl font-medium text-center my-4"><b>There are the modules you will receive:</b></p>
-          
+
           <ul class="space-y-4 list-inside mx-auto">
             <li class="flex items-center">
                 <svg class="w-8 h-8 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
@@ -178,8 +187,7 @@
 
         <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex flex-col justify-center items-center">
 
-          <digistore-upsell-button class="cta" template="light">YES! I WANT THIS UPGRADE</digistore-upsell-button>
-          <script src="https://www.digistore24.com/service/digistore.js"></script><script>digistoreUpsell()</script>
+          <a href="https://buygoods.com/secure/upsell/?account_id=9069&product_codename=gat1u&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS90eXAv" class="cta" template="light">YES! I WANT THIS UPGRADE</a>
 
           <br>
           <center>
@@ -238,6 +246,10 @@
         <br><br>
         Copyright © BrainSync Project. 2023
       </p>
+
+      <br><br>
+      <center><span id=disclaimer></span></center>
+      <script src="https://display.buygoods.com/v1/disclaimer?id=disclaimer&account_id=9069"></script>
     </footer>
 
 
