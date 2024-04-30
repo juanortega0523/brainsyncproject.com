@@ -42,6 +42,25 @@
 
     <script src="https://trackings.nemu.com.br/trackings/script.js" async data-tracking-id="ftX-Zeugej" crossorigin="anonymous"></script>
 
+    <script>
+      function onLoad() {
+        var links = document.getElementsByTagName("a");
+
+        for (var i = 0, n = links.length; i < n; i++) {
+          if (links[i].href.includes("#")) {
+            continue;
+          }
+
+          var href =
+            links[i].href.trim() +
+            (links[i].href.indexOf("?") > 0 ? "&" : "?") +
+            document.location.search.replace("?", "").toString();
+          links[i].href = href;
+        }
+      }
+
+      setTimeout(onLoad, 2000);
+    </script>
 
 
     <style>
