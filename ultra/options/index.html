@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js no-svg" data-op3-support="no-js no-svg no-webp no-avif">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="BrainSync Project Ultra">
+    <title>BrainSync Project Ultra</title>
+
+    <meta property="og:title" content="BrainSync Project Ultra" />
+    <meta property="og:description" content="Options page" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "h8lwgi8kjc");
+    </script>
+
+    <!-- Meta Pixel Code -->
+
+    <!-- End Meta Pixel Code -->
+
+    <!-- BG tracking Code -->
+
+
+    <!-- End BG tracking Code -->
+
+
+    <script id="wpcp_disable_selection" type="text/javascript">
+      var image_save_msg='You are not allowed to save images!';
+      	var no_menu_msg='Context Menu disabled!';
+      	var smessage = "";
+
+      function disableEnterKey(e)
+      {
+      	var elemtype = e.target.tagName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+      	{
+      		elemtype = 'TEXT';
+      	}
+
+      	if (e.ctrlKey){
+           var key;
+           if(window.event)
+                key = window.event.keyCode;     //IE
+           else
+                key = e.which;     //firefox (97)
+          //if (key != 17) alert(key);
+           if (elemtype!= 'TEXT' && (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43 || key == 73))
+           {
+      		if(wccp_free_iscontenteditable(e)) return true;
+      		show_wpcp_message('You are not allowed to copy content or view source');
+      		return false;
+           }else
+           	return true;
+           }
+      }
+
+
+      /*For contenteditable tags*/
+      function wccp_free_iscontenteditable(e)
+      {
+      	var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+      	var target = e.target || e.srcElement;
+
+      	var elemtype = e.target.nodeName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	var iscontenteditable = "false";
+
+      	if(typeof target.getAttribute!="undefined" ) iscontenteditable = target.getAttribute("contenteditable"); // Return true or false as string
+
+      	var iscontenteditable2 = false;
+
+      	if(typeof target.isContentEditable!="undefined" ) iscontenteditable2 = target.isContentEditable; // Return true or false as boolean
+
+      	if(target.parentElement.isContentEditable) iscontenteditable2 = true;
+
+      	if (iscontenteditable == "true" || iscontenteditable2 == true)
+      	{
+      		if(typeof target.style!="undefined" ) target.style.cursor = "text";
+
+      		return true;
+      	}
+      }
+
+      ////////////////////////////////////
+      function disable_copy(e)
+      {
+      	var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+      	var elemtype = e.target.tagName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+      	{
+      		elemtype = 'TEXT';
+      	}
+
+      	if(wccp_free_iscontenteditable(e)) return true;
+
+      	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+      	var checker_IMG = '';
+      	if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+      	if (elemtype != "TEXT")
+      	{
+      		if (smessage !== "" && e.detail == 2)
+      			show_wpcp_message(smessage);
+
+      		if (isSafari)
+      			return true;
+      		else
+      			return false;
+      	}
+      }
+
+      //////////////////////////////////////////
+      function disable_copy_ie()
+      {
+      	var e = e || window.event;
+      	var elemtype = window.event.srcElement.nodeName;
+      	elemtype = elemtype.toUpperCase();
+      	if(wccp_free_iscontenteditable(e)) return true;
+      	if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+      	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+      	{
+      		return false;
+      	}
+      }
+      function reEnable()
+      {
+      	return true;
+      }
+      document.onkeydown = disableEnterKey;
+      document.onselectstart = disable_copy_ie;
+      if(navigator.userAgent.indexOf('MSIE')==-1)
+      {
+      	document.onmousedown = disable_copy;
+      	document.onclick = reEnable;
+      }
+      function disableSelection(target)
+      {
+          //For IE This code will work
+          if (typeof target.onselectstart!="undefined")
+          target.onselectstart = disable_copy_ie;
+
+          //For Firefox This code will work
+          else if (typeof target.style.MozUserSelect!="undefined")
+          {target.style.MozUserSelect="none";}
+
+          //All other  (ie: Opera) This code will work
+          else
+          target.onmousedown=function(){return false}
+          target.style.cursor = "default";
+      }
+      //Calling the JS function directly just after body load
+      window.onload = function(){disableSelection(document.body);};
+
+      //////////////////special for safari Start////////////////
+      var onlongtouch;
+      var timer;
+      var touchduration = 1000; //length of time we want the user to touch before we do something
+
+      var elemtype = "";
+      function touchstart(e) {
+      	var e = e || window.event;
+        // also there is no e.target property in IE.
+        // instead IE uses window.event.srcElement
+        	var target = e.target || e.srcElement;
+
+      	elemtype = window.event.srcElement.nodeName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if(!wccp_pro_is_passive()) e.preventDefault();
+      	if (!timer) {
+      		timer = setTimeout(onlongtouch, touchduration);
+      	}
+      }
+
+      function touchend() {
+          //stops short touches from firing the event
+          if (timer) {
+              clearTimeout(timer);
+              timer = null;
+          }
+      	onlongtouch();
+      }
+
+      onlongtouch = function(e) { //this will clear the current selection if anything selected
+
+      	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "EMBED" && elemtype != "OPTION")
+      	{
+      		if (window.getSelection) {
+      			if (window.getSelection().empty) {  // Chrome
+      			window.getSelection().empty();
+      			} else if (window.getSelection().removeAllRanges) {  // Firefox
+      			window.getSelection().removeAllRanges();
+      			}
+      		} else if (document.selection) {  // IE?
+      			document.selection.empty();
+      		}
+      		return false;
+      	}
+      };
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+          window.addEventListener("touchstart", touchstart, false);
+          window.addEventListener("touchend", touchend, false);
+      });
+
+      function wccp_pro_is_passive() {
+
+        var cold = false,
+        hike = function() {};
+
+        try {
+      	  const object1 = {};
+        var aid = Object.defineProperty(object1, 'passive', {
+        get() {cold = true}
+        });
+        window.addEventListener('test', hike, aid);
+        window.removeEventListener('test', hike, aid);
+        } catch (e) {}
+
+        return cold;
+      }
+      /*special for safari End*/
+    </script>
+    <script type="text/javascript">
+      document.ondragstart = function() { return false;}
+      	function nocontext(e) {
+      	   return false;
+      	}
+      	document.oncontextmenu = nocontext;
+    </script>
+    <script type="text/javascript">
+      var e = document.getElementsByTagName('body')[0];
+      if(e)
+      {
+      	e.setAttribute('unselectable',"on");
+      }
+    </script>
+
+
+    <link rel="stylesheet" href="css/master.css">
+
+
+  </head>
+  <body class="bg-black">
+
+    <!-- MOBILE -->
+    <section class="bg-transparent text-white py-4 px-4 md:hidden" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+      <div class="w-full container mx-auto flex justify-between items-center">
+        <div class="flex justify-start items-center">
+          <img class="h-[34px] w-auto -ml-4 -mr-1" src="img/BSU-1pote.png" alt="logo">
+          <p class="text-base font-bold uppercase leading-tight">BRAINSYNC ULTRA</p>
+        </div>
+        <div class="flex justify-end items-center gap-1 md:gap-2">
+          <ol class="flex justify-center items-center ">
+            <li class="relative w-full">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-6 h-6 bg-white text-black rounded-full ring-0 ring-white ring-2 shrink-0">
+                  1
+                </div>
+                <div class="flex w-4 h-0.5 bg-gray-300"></div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-6 h-6 bg-white text-black rounded-full ring-0 ring-white ring-2 shrink-0">
+                  2
+                </div>
+                <div class="flex w-4 h-0.5 bg-gray-300"></div>
+              </div>
+            </li>
+            <li class="relative w-full">
+              <div class="flex items-center">
+                <div class="z-10 flex items-center justify-center w-6 h-6 bg-transparent rounded-full ring-0 ring-white ring-2 shrink-0">
+                  3
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-8 px-0 md:py-16 bg-white text-black md:hidden">
+      <div class="container max-w-4xl mx-auto text-center px-2 md:px-0 mb-8 md:mb-16">
+        <p class="text-base md:text-lg italic mb-1">Your purchase is being processed…</p>
+        <p class="font-extrabold text-4xl md:text-5xl text-red-600">DON'T CLOSE THIS PAGE!</p>
+
+        <div class="block relative w-full border rounded-lg shadow-sm text-white border-gray-600 bg-transparent mt-6" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+          <div class="px-3 py-4 flex gap-2 justify-center items-center">
+            <div class="w-1/2">
+              <h5 class="font-extrabold text-3xl mb-2 text-left">6 MORE BOTTLES</h5>
+              <div class="flex items-start justify-start gap-2">
+                <div>
+                  <h5 class="font-extrabold text-3xl ">ONLY</h5>
+                  <p class="text-sm font-base whitespace-nowrap">PER BOTTLE</p>
+                </div>
+                <h5 class="font-extrabold text-5xl text-green-500 flex items-start scale-110"><span class="text-sm mt-2">$</span>29</h5>
+              </div>
+            </div>
+            <div class="w-1/2 relative">
+              <img class="w-full scale-125 laz" src="img/BSU-6potes.png" alt="image">
+              <div class="absolute bottom-0 right-0 translate-x-3 ">
+                <img class="w-16 laz" src="img/red-badge.png" alt="image">
+                <p class="absolute bottom-0 right-0 -translate-y-4 -translate-x-0.5 text-base font-bold w-14 leading-3">86% <span class="text-[9px]">SAVINGS</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="absolute botttom-0 -translate-y-3 left-1/2 -translate-x-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-black" viewBox="0 0 16 16">
+              <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+          </div>
+        </div>
+
+
+        <div class="w-full p-4 border-4 border-dashed border-black bg-yellow-50 rounded-lg mt-6">
+          <p class="text-3xl font-bold leading-tight mb-6">A Special Deal For New Customers Only!</p>
+          <p class="text-xl font-bold leading-tight px-4">Stock Up On BrainSync Ultra Now, 6 More Bottles At The Lowest Price You Ever See, <span class="text-green-600">Just $29</span></p>
+
+          <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" ><span class="drop-shadow">YES! <span class="text-xl">Upgrade My Order</span></span></a>
+
+          <p class="font-bold leading-tight mt-6 px-4">Protects you from future price increases as well as out of stocks for just $174</p>
+          <p class="text-3xl font-bold leading-tight mt-6 mb-3">SAVINGS: <span class="text-green-600">$750.00 OFF RETAIL</span></p>
+
+        </div>
+
+        <div class="w-full mt-10 text-start px-2">
+          <p class="text-2xl md:text-3xl font-bold mb-5">Dear friend...</p>
+          <p class="text-lg md:text-xl font-bold mb-4">BrainSync Ultra Pills Has Taken the World by Storm! We are running out of stock for the next 6 months...</p>
+          <p class="text-lg md:text-xl mb-4">But since you trusted us, we made <b>a special condition</b> for you to take advantage of the remaining stock.</p>
+          <p class="text-lg md:text-xl mb-4">Our BrainSync Ultra Pills are crafted with cutting-edge technology and the finest natural ingredients, scientifically proven to enhance mental clarity and spiritual well-being. Trusted by thousands of satisfied customers worldwide, our product's unique formula has garnered praise from top wellness experts and influencers. This unprecedented demand is a testament to its effectiveness.</p>
+          <p class="text-lg md:text-xl mb-4"><b>Due to the overwhelming global demand, our stocks are depleting rapidly.</b> We are facing significant delays in restocking as our shipments are caught in international transport bottlenecks and lengthy customs processes. The ongoing global shipping crisis means that our next batch might not arrive for another six months.</p>
+          <p class="text-lg md:text-xl mb-4">By securing more bottles now, you ensure uninterrupted access to the benefits that have made BrainSync Ultra a global phenomenon. Don’t miss out on maintaining your mental edge and spiritual balance. Act fast to take advantage of this exclusive offer, available only to our valued customers like you.</p>
+        </div>
+
+
+        <div class="block relative w-full border rounded-lg shadow-sm text-white border-gray-600 bg-transparent mt-6" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+          <div class="px-3 py-6 flex flex-col justify-center items-center">
+            <h5 class="text-3xl md:text-4xl font-extrabold text-white mb-4">YOU WON A SPECIAL CONDITION</h5>
+            <div class="w-full relative">
+              <img class="w-full laz" src="img/BSU-6potes.png" alt="image">
+              <div class="absolute bottom-0 right-1/4 translate-x-12 ">
+                <img class="w-24 laz" src="img/red-badge.png" alt="image">
+                <div class="absolute bottom-0 right-0 -translate-y-3 -translate-x-2 text-base font-bold w-20 leading-3">
+                  <div class="text-[9px]">EACH BOTTLE</div>
+                  <div class="flex justify-center items-start">
+                    <div class="w-1/3 text-[9px] text-start mt-1 mr-2">LESS THAN</div>
+                    <p class="font-extrabold text-base mr-0.5 mt-0.5 leading-1">$</p>
+                    <p class="font-extrabold text-4xl leading-1">1</p>
+                  </div>
+                  <div class="text-[9px] -mt-1">PER DAY</div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full">
+              <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" >
+                <span class="drop-shadow">YES! <span class="text-xl">Upgrade My Order</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full mt-8 text-start px-2">
+          <p class="text-lg md:text-xl mb-4"><b>That’s just $29 a bottle</b>. It’s also a total savings of $750 off the normal retail price.</p>
+          <p class="text-lg md:text-xl mb-4"><b>Take advantage of this exclusive one-time offer now by clicking the yellow button below.</b> This is the only time you’ll see this offer, and it’s covered by a 180 Day, 100% Money Back Guarantee. So you have nothing to lose.</p>
+
+          <div class="flex flex-row justify-center items-center gap-4 my-12">
+            <div class="w-1/4">
+              <img class="w-full laz" src="img/guarantee-badge.png" alt="image">
+            </div>
+            <div class=" text-center">
+              <p class="text-5xl md:text-2xl font-bold">180 DAY</p>
+              <p class="text-lg md:text-2xl font-bold">Money-back Guarantee</p>
+            </div>
+          </div>
+
+          <p class="text-lg md:text-xl mb-4"><b>BrainSync Ultra comes with a 180 Day, 100% Money Back Guarantee.</b>  That means if you change your mind about this decision at any point in the next six months – all you need to do is email us, and we’ll refund your purchase. Plus, you don’t need to return the bottle.</p>
+          <p class="text-lg md:text-xl mb-4"><b>If you don’t love your experience with BrainSync Ultra, you pay NOTHING!</b></p>
+          <p class="text-lg md:text-xl mb-4"><b>Your decision to invest in BrainSync Ultra is completely risk free.</b>  If you change your mind, just call or email customer service and get a full refund. You don’t even have to return the bottles, they are yours to keep.</p>
+
+        </div>
+
+
+        <div class="block relative w-full border rounded-lg shadow-sm text-black border-2 border-black bg-white mt-12">
+          <div class="px-4 py-6 flex flex-col justify-center items-center gap-4">
+            <h5 class="text-5xl md:text-5xl font-extrabold mb-2">6 MORE BOTTLES</h5>
+            <div class="w-full flex items-center justify-center gap-2 py-2 px-4 flex justify-center items-center bg-transparent text-white font-bold rounded-lg md:rounded-l-lg" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+              <div class="flex flex-col items-center">
+                <p class="text-3xl font-bold">ONLY</p>
+                <p class="text-xs font-light">PER BOTTLE</p>
+              </div>
+              <div class="flex flex-row items-start font-bold text-green-500">
+                <p class="text-base">$</p>
+                <p class="text-5xl">29</p>
+              </div>
+            </div>
+            <div class="w-full relative">
+              <img class="w-full laz" src="img/BSU-6potes.png" alt="image">
+              <div class="absolute bottom-0 right-1/4 translate-x-12 ">
+                <img class="w-24 laz" src="img/red-badge.png" alt="image">
+                <div class="absolute bottom-0 right-0 -translate-y-6 -translate-x-2 text-base text-white font-bold w-20 leading-2">
+                  <p class="text-3xl">
+                    83%
+                  </p>
+                  <p class="text-xs -mt-1">SAVINGS</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-full px-4">
+              <p class="text-2xl md:text-2xl mb-2">ALL FOR JUST $174</p>
+              <p class="text-2xl md:text-2xl mb-4 p-2 bg-green-100 text-green-700">SAVE $750.00</p>
+
+              <div class="flex items-center justify-center gap-4 text-black">
+                <svg viewBox="0 0 62.6 43.39" class="w-6 h-6 fill-black">
+                  <path d="M60.5 28.79v-1.4a3.06 3.06 0 0 1-2.9-3 3 3 0 0 1 2.9-3v-1.3a5.53 5.53 0 0 0-.7-2.5c-2.1-3.9-4.4-7.7-6.6-11.6a2.43 2.43 0 0 0-2.4-1.4h-7.2c-2.2 0-3.3 1-3.3 3.3v21H21.6a10.64 10.64 0 0 1 2.9 7.8H40c0-8.23 6.2-10.2 9.1-10.3a9.26 9.26 0 0 1 6.1 1.9 9.43 9.43 0 0 1 3.7 8.4c2.1.2 3 .1 3.7-1.6v-4.8a2.3 2.3 0 0 0-2.1-1.5zM54 16.69h-8.8c-.6 0-.9-.2-.9-.8v-6.4c0-.7.2-1 .9-1h4.4a1.52 1.52 0 0 1 1 .6c1.3 2.2 2.6 4.5 3.8 6.7.5.61.3.91-.4.91zm-29.5 20H40m20.5-13.9a1.55 1.55 0 0 0-1.4 1.6 1.62 1.62 0 0 0 1.4 1.6z"></path>
+                  <path d="M50.5 29.4a6.9 6.9 0 0 0-7.8 5.1c-.9 3.8 1.6 8.2 5.6 8.8a7.24 7.24 0 0 0 8.2-7.1 7.06 7.06 0 0 0-6-6.8zm-1 10a3.05 3.05 0 0 1-3.1-3.1 3.05 3.05 0 0 1 6.1 0 3 3 0 0 1-3 3.1zm-31.9-9.7a7 7 0 0 0-8.8 3.5 6.92 6.92 0 0 0 2.7 9.1 7 7 0 1 0 6.1-12.6zm-2.5 9.7a3.12 3.12 0 0 1-3.1-3.1 3.05 3.05 0 0 1 3.1-3.1 3 3 0 0 1 3 3 3 3 0 0 1-3 3.2zm-9.4-2.7c-1.4 0-2.7.1-4 0A1.94 1.94 0 0 1 0 34.79v-.4z"></path>
+                  <path d="M8.8 28.9c-.7.7-3.1 2.47-3.15 7.78L0 34.4v-3.61a1.8 1.8 0 0 1 1.7-1.9c2.3-.1 4.6.01 7.1.01zM38.4 2v25.1h-37V2a2 2 0 0 1 2-2h33.1a2 2 0 0 1 1.9 2z"></path>
+                </svg>
+                <p class="font-bold">FREE Shipping Included!</p>
+              </div>
+            </div>
+          </div>
+          <a class="w-full py-6 px-4 text-2xl md:text-3xl flex justify-center items-center bg-transparent text-white font-bold" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+              <span class="drop-shadow">YES! Upgrade My Order</span>
+          </a>
+        </div>
+
+
+        <div class="w-full mt-8 text-start px-2">
+          <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" >
+            <span class="drop-shadow">YES! <span class="text-xl">Upgrade My Order</span></span>
+          </a>
+
+          <a href="#" class="block text-base md:text-xl mt-8  underline"><b>NO THANKS.</b> I understand that this is my only opportunity to get access to this special offer, and I’m okay with missing out. </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- DESKTOP -->
+    <section class="bg-white text-black py-6 px-4 hidden md:block">
+      <div class="w-full container mx-auto flex justify-between items-center">
+        <div class="flex justify-start items-center">
+          <img class="h-[37px] w-auto -ml-4 -mr-1 " src="img/BSU-1pote.png" alt="logo">
+          <p class="text-2xl font-bold uppercase leading-tight">BRAINSYNC ULTRA</p>
+        </div>
+        <div class="flex justify-end items-center gap-3">
+          <img class="h-[22px] w-auto " src="img/Nav-Logo-1.svg" alt="logo">
+          <img class="h-[32px] w-auto " src="img/Nav-Logo-2.svg" alt="logo">
+          <img class="h-[37px] w-auto " src="img/Nav-Logo-3.svg" alt="logo">
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section class="bg-black text-white py-4 md:py-16 hidden md:block">
+      <div class="container p-8 mx-auto text-start rounded-lg bg-white text-black">
+
+        <ol class="flex justify-center items-center w-2/3 mx-auto">
+          <li class="relative w-full">
+            <div class="flex items-center gap-3">
+            <p class="text-lg font-bold text-black">Shipping</p>
+              <div class="z-10 flex items-center justify-center w-8 h-8 bg-black text-white font-bold rounded-full ring-0 ring-white ring-2 shrink-0">
+                1
+              </div>
+              <div class="flex w-full h-1.5 rounded-lg bg-black"></div>
+            </div>
+          </li>
+          <li class="relative w-full">
+            <div class="flex items-center gap-3 ml-3">
+              <p class="text-lg font-bold text-black">Options</p>
+              <div class="z-10 flex items-center justify-center w-8 h-8 bg-black text-white font-bold rounded-full ring-0 ring-white ring-2 shrink-0">
+                2
+              </div>
+              <div class="flex w-full h-1.5 rounded-lg bg-zinc-400"></div>
+            </div>
+          </li>
+          <li class="relative">
+            <div class="flex items-center gap-3 ml-3">
+              <p class="text-lg font-bold text-zinc-400">Summary</p>
+              <div class="z-10 flex items-center justify-center w-8 h-8 bg-transparent text-zinc-400 font-bold rounded-full ring-0 ring-zinc-400 ring-2 shrink-0">
+                3
+              </div>
+            </div>
+          </li>
+        </ol>
+
+        <div class="w-full text-center mt-8">
+          <p class="text-lg italic mb-1">Your purchase is being processed…</p>
+          <p class="font-extrabold text-5xl text-red-600">DON'T CLOSE THIS PAGE!</p>
+        </div>
+
+
+        <div class="w-full flex gap-8 mt-12">
+          <div class="w-1/3">
+            <div class="block relative w-full text-center border rounded-lg shadow-sm text-black border-2 border-black bg-white">
+              <div class="px-4 py-6 flex flex-col justify-center items-center gap-4">
+                <h5 class="text-5xl md:text-5xl font-extrabold mb-2">6 MORE BOTTLES</h5>
+                <div class="w-full flex justify-center items-center">
+                  <div class="w-full flex items-center justify-center gap-2 py-2 px-4 flex justify-center items-center bg-transparent text-white font-bold rounded-lg md:rounded-l-lg" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+                    <div class="flex flex-col items-center">
+                      <p class="text-3xl font-bold">ONLY</p>
+                      <p class="text-xs font-light">PER BOTTLE</p>
+                    </div>
+                    <div class="flex flex-row items-start font-bold text-green-500">
+                      <p class="text-base">$</p>
+                      <p class="text-5xl">29</p>
+                    </div>
+                  </div>
+                  <div class="h-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-15 -mr-6 fill-black -rotate-90" viewBox="0 6 16 16">
+                      <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="w-full relative">
+                  <img class="w-full laz" src="img/BSU-6potes.png" alt="image">
+                  <div class="absolute bottom-0 right-1/4 translate-x-12 ">
+                    <img class="w-24 laz" src="img/red-badge.png" alt="image">
+                    <div class="absolute bottom-0 right-0 -translate-y-6 -translate-x-2 text-base text-white font-bold w-20 leading-2">
+                      <p class="text-3xl">
+                        83%
+                      </p>
+                      <p class="text-xs -mt-1">SAVINGS</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full px-4">
+                  <p class="text-2xl md:text-2xl mb-2">ALL FOR JUST $174</p>
+                  <p class="text-2xl md:text-2xl mb-4 p-2 bg-green-100 text-green-700">SAVE $750.00</p>
+
+                  <div class="flex items-center justify-center gap-4 text-black">
+                    <svg viewBox="0 0 62.6 43.39" class="w-6 h-6 fill-black">
+                      <path d="M60.5 28.79v-1.4a3.06 3.06 0 0 1-2.9-3 3 3 0 0 1 2.9-3v-1.3a5.53 5.53 0 0 0-.7-2.5c-2.1-3.9-4.4-7.7-6.6-11.6a2.43 2.43 0 0 0-2.4-1.4h-7.2c-2.2 0-3.3 1-3.3 3.3v21H21.6a10.64 10.64 0 0 1 2.9 7.8H40c0-8.23 6.2-10.2 9.1-10.3a9.26 9.26 0 0 1 6.1 1.9 9.43 9.43 0 0 1 3.7 8.4c2.1.2 3 .1 3.7-1.6v-4.8a2.3 2.3 0 0 0-2.1-1.5zM54 16.69h-8.8c-.6 0-.9-.2-.9-.8v-6.4c0-.7.2-1 .9-1h4.4a1.52 1.52 0 0 1 1 .6c1.3 2.2 2.6 4.5 3.8 6.7.5.61.3.91-.4.91zm-29.5 20H40m20.5-13.9a1.55 1.55 0 0 0-1.4 1.6 1.62 1.62 0 0 0 1.4 1.6z"></path>
+                      <path d="M50.5 29.4a6.9 6.9 0 0 0-7.8 5.1c-.9 3.8 1.6 8.2 5.6 8.8a7.24 7.24 0 0 0 8.2-7.1 7.06 7.06 0 0 0-6-6.8zm-1 10a3.05 3.05 0 0 1-3.1-3.1 3.05 3.05 0 0 1 6.1 0 3 3 0 0 1-3 3.1zm-31.9-9.7a7 7 0 0 0-8.8 3.5 6.92 6.92 0 0 0 2.7 9.1 7 7 0 1 0 6.1-12.6zm-2.5 9.7a3.12 3.12 0 0 1-3.1-3.1 3.05 3.05 0 0 1 3.1-3.1 3 3 0 0 1 3 3 3 3 0 0 1-3 3.2zm-9.4-2.7c-1.4 0-2.7.1-4 0A1.94 1.94 0 0 1 0 34.79v-.4z"></path>
+                      <path d="M8.8 28.9c-.7.7-3.1 2.47-3.15 7.78L0 34.4v-3.61a1.8 1.8 0 0 1 1.7-1.9c2.3-.1 4.6.01 7.1.01zM38.4 2v25.1h-37V2a2 2 0 0 1 2-2h33.1a2 2 0 0 1 1.9 2z"></path>
+                    </svg>
+                    <p class="font-bold">FREE Shipping Included!</p>
+                  </div>
+                </div>
+              </div>
+              <a class="w-full py-6 px-4 text-3xl flex justify-center items-center text-center bg-transparent text-white font-bold" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+                <span class="drop-shadow">YES! Upgrade My Order</span>
+              </a>
+            </div>
+
+            <div class="w-full mt-6 text-center px-4 py-6 rounded-lg bg-zinc-600 text-zinc-100">
+              <div class="flex flex-row justify-center items-center gap-4 mb-6">
+                <div class="w-1/4">
+                  <img class="w-full laz" src="img/guarantee-badge.png" alt="image">
+                </div>
+                <div class=" text-center">
+                  <p class="text-5xl font-bold">180 DAY</p>
+                  <p class="text-base font-bold">Money-back Guarantee</p>
+                </div>
+              </div>
+
+              <p class="text-base leading-tight text-zinc-300 mb-4">If you’re not satisfied for any reason, we INSIST on giving you a full refund.</p>
+              <p class="text-base leading-tight text-zinc-300 mb-2">We’re not happy until you’re happy. That’s why your investment today is covered with a full 6 month guarantee!</p>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="w-2/3">
+            <div class="w-full p-8 border-4 border-dashed border-black bg-yellow-50 rounded-lg text-center">
+              <p class="text-3xl font-bold leading-tight mb-6">A Special Deal For New Customers Only!</p>
+              <p class="text-xl font-bold leading-tight px-4">Stock Up On BrainSync Ultra Now, 6 More Bottles At The Lowest Price You Ever See, <span class="text-green-600">Just $29</span></p>
+
+              <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" ><span class="drop-shadow">YES! Upgrade My Order</span></a>
+
+              <p class="font-bold leading-tight mt-6 px-4">Protects you from future price increases as well as out of stocks for just $174</p>
+              <p class="text-3xl font-bold leading-tight mt-6 mb-3">SAVINGS: <span class="text-green-600">$750.00 OFF RETAIL</span></p>
+
+              <p class="font-bold leading-tight mt-6 px-4">Keep reading for all of the details</p>
+
+            </div>
+
+            <div class="w-full mt-10 text-start px-2">
+              <p class="text-2xl md:text-3xl font-bold mb-5">Dear friend...</p>
+              <p class="text-lg md:text-xl font-bold mb-4">BrainSync Ultra Pills Has Taken the World by Storm! We are running out of stock for the next 6 months...</p>
+              <p class="text-lg md:text-xl mb-4">But since you trusted us, we made <b>a special condition</b> for you to take advantage of the remaining stock.</p>
+              <p class="text-lg md:text-xl mb-4">Our BrainSync Ultra Pills are crafted with cutting-edge technology and the finest natural ingredients, scientifically proven to enhance mental clarity and spiritual well-being. Trusted by thousands of satisfied customers worldwide, our product's unique formula has garnered praise from top wellness experts and influencers. This unprecedented demand is a testament to its effectiveness.</p>
+              <p class="text-lg md:text-xl mb-4"><b>Due to the overwhelming global demand, our stocks are depleting rapidly.</b> We are facing significant delays in restocking as our shipments are caught in international transport bottlenecks and lengthy customs processes. The ongoing global shipping crisis means that our next batch might not arrive for another six months.</p>
+              <p class="text-lg md:text-xl mb-4">By securing more bottles now, you ensure uninterrupted access to the benefits that have made BrainSync Ultra a global phenomenon. Don’t miss out on maintaining your mental edge and spiritual balance. Act fast to take advantage of this exclusive offer, available only to our valued customers like you.</p>
+            </div>
+
+
+            <div class="block relative w-full border rounded-lg shadow-sm text-white border-gray-600 bg-transparent mt-6" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+              <div class="p-12 flex flex-col justify-center items-center text-center">
+                <h5 class="text-3xl md:text-4xl font-extrabold text-white mb-4">YOU WON A SPECIAL CONDITION</h5>
+                <div class="w-full relative">
+                  <img class="w-full laz" src="img/BSU-6potes.png" alt="image">
+                  <div class="absolute bottom-0 right-1/4 translate-x-12 ">
+                    <img class="w-24 laz" src="img/red-badge.png" alt="image">
+                    <div class="absolute bottom-0 right-0 -translate-y-3 -translate-x-2 text-base font-bold w-20 leading-3">
+                      <div class="text-[9px]">EACH BOTTLE</div>
+                      <div class="flex justify-center items-start">
+                        <div class="w-1/3 text-[9px] text-start mt-1 mr-2">LESS THAN</div>
+                        <p class="font-extrabold text-base mr-0.5 mt-0.5 leading-1">$</p>
+                        <p class="font-extrabold text-4xl leading-1">1</p>
+                      </div>
+                      <div class="text-[9px] -mt-1">PER DAY</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full">
+                  <a href="#" class="block text-base md:text-xl mt-8  underline"><b>Yes, Upgrade my order for just $174</b></a>
+
+
+                  <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" >
+                    <span class="drop-shadow">YES! Upgrade My Order</span>
+                  </a>
+                  <a href="#" class="block text-base md:text-xl mt-8  underline"><b>NO THANKS.</b> </a>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full mt-8 text-start px-2">
+              <p class="text-lg md:text-xl mb-4"><b>That’s just $29 a bottle</b>. It’s also a total savings of $750 off the normal retail price.</p>
+              <p class="text-lg md:text-xl mb-4"><b>Take advantage of this exclusive one-time offer now by clicking the yellow button below.</b> This is the only time you’ll see this offer, and it’s covered by a 180 Day, 100% Money Back Guarantee. So you have nothing to lose.</p>
+
+              <div class="flex flex-row justify-center items-center gap-4 my-12">
+                <div class="w-1/4">
+                  <img class="w-full laz" src="img/guarantee-badge.png" alt="image">
+                </div>
+                <div class=" text-center">
+                  <p class="text-6xl font-bold">180 DAY</p>
+                  <p class="text-xl font-bold">Money-back Guarantee</p>
+                </div>
+              </div>
+
+              <p class="text-lg md:text-xl mb-4"><b>BrainSync Ultra comes with a 180 Day, 100% Money Back Guarantee.</b>  That means if you change your mind about this decision at any point in the next six months – all you need to do is email us, and we’ll refund your purchase. Plus, you don’t need to return the bottle.</p>
+              <p class="text-lg md:text-xl mb-4"><b>If you don’t love your experience with BrainSync Ultra, you pay NOTHING!</b></p>
+              <p class="text-lg md:text-xl mb-4"><b>Your decision to invest in BrainSync Ultra is completely risk free.</b>  If you change your mind, just call or email customer service and get a full refund. You don’t even have to return the bottles, they are yours to keep.</p>
+
+            </div>
+
+            <div class="w-full mt-8 text-start px-2">
+              <a href="https://buygoods.com/secure/checkout.html?account_id=9069&product_codename=bra1&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS9ic3AtcHJvY2Vzc2luZy91MQ==" class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-2xl md:text-3xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-8 border-b-4 border-[#83663b] flex justify-center items-center" >
+                <span class="drop-shadow">YES! Upgrade My Order</span>
+              </a>
+
+              <a href="#" class="block text-base md:text-xl mt-8  underline"><b>NO THANKS.</b> I understand that this is my only opportunity to get access to this special offer, and I’m okay with missing out. </a>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <footer class="py-8 bg-black text-white border-t border-zinc-900">
+      <div class="container max-w-3xl mx-auto px-4 md:px-0 text-center">
+        <p class="text-sm font-bold">BrainSync Project ® All rights reserved 2024.</p>
+        <ul class="flex justify-center items-center text-white text-xs mt-4 gap-4 underline">
+          <li>
+            <a href="../../contact/index.html" target="_blank" style="color:white;">Contact Us</a>
+          </li>
+          <li>
+            <a href="../../policy/index.html" target="_blank" style="color:white;">Privacy</a>
+          </li>
+          <li>
+            <a href="../../terms/index.html" target="_blank" style="color:white;">Terms</a>
+          </li>
+          <li>
+            <a href="../../refund-policy/index.html" target="_blank" style="color:white;">Refund</a>
+          </li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-4">This site is not part of or endorsed by Facebook ™️. Facebook ™️ is a trademark of Facebook ™️ Inc. The results listed above are my personal results and those of my students. At the end of this no-cost initial training I will give people the opportunity to access an advanced program that will help them implement and go even deeper into the subject matter. This is completely optional.</p>
+      </div>
+    </footer>
+
+    <script src="js/accordion.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
+
+  </body>
+</html>

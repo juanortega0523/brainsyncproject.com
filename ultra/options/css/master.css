@@ -1,0 +1,33 @@
+@media screen and (max-width: 479px) {
+  .arrow-down {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .arrow-down {
+    position: absolute;
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 140px;
+    height: 140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-bottom: 0;
+    border-radius: 8px;
+    background-color: #000;
+    transform: rotate(45deg);
+  }
+}
+
+
+.accordion-selected {
+  background-image:radial-gradient(at center center, rgb(254, 229, 161) 13%, rgb(204, 160, 94) 70%);
+  color: black !important;
+  fill: black !important;
+}
