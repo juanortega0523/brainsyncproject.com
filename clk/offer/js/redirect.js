@@ -17,6 +17,7 @@ xhttp.send();
 var url_string = window.location.href;
 var url = new URL(url_string);
 var sck = new URL(document.location).searchParams.get("sck");
+var subid2 = new URL(document.location).searchParams.get("subid2");
 
 function redirect() {
 
@@ -26,6 +27,9 @@ function redirect() {
   //   "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
 
   // location.href = "https://www.checkout-ds24.com/product/524297/?ds24tr=" + sck;
+
+  location.href = "https://pay.laniavita.com/bsp-checkout?tk=" + subid2 + "&" +
+    document.location.search.split('?')[1];
 
   // if (geo_countryCode == 'US') {
   //   location.href =
@@ -39,17 +43,17 @@ function redirect() {
   //     sck;
   // }
 
-  if (geo_countryCode == 'US' || geo_countryCode == 'CA' || geo_countryCode ==
-    'AU' || geo_countryCode == 'NZ' || geo_countryCode == 'IN' ||
-    geo_countryCode == 'ZA' || geo_countryCode == 'MX') {
-    location.href =
-      "https://pay.hotmart.com/F88493210J?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
-      sck;
-    //maktub
-  } else {
-    //dumont
-    location.href =
-      "https://pay.hotmart.com/H88208936H?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
-      sck;
-  }
+  // if (geo_countryCode == 'US' || geo_countryCode == 'CA' || geo_countryCode ==
+  //   'AU' || geo_countryCode == 'NZ' || geo_countryCode == 'IN' ||
+  //   geo_countryCode == 'ZA' || geo_countryCode == 'MX') {
+  //   location.href =
+  //     "https://pay.hotmart.com/F88493210J?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
+  //     sck;
+  //   //maktub
+  // } else {
+  //   //dumont
+  //   location.href =
+  //     "https://pay.hotmart.com/H88208936H?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" +
+  //     sck;
+  // }
 }
