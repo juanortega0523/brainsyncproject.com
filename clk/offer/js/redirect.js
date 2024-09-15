@@ -24,7 +24,7 @@ function redirect() {
   // var pid = "S84803235P";
   // var off = "";
   // location.href = "https://pay.hotmart.com/" + pid +
-  //   "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + sck;
+  //   "?checkoutMode=10&offDiscount=ONLY5SLOTSLEFT&sck=" + subid2;
 
   // location.href = "https://www.checkout-ds24.com/product/524297/?ds24tr=" + sck;
 
