@@ -104,13 +104,19 @@
 
         <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex flex-col justify-center items-center">
 
-          <a href="https://buygoods.com/secure/upsell/?account_id=9069&product_codename=gat1d&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS90eXAv" class="cta" template="light">YES! I WANT THIS UPGRADE</a>
+          <!-- HOTMART - Upsell Widget -->
+<div id="box_hotmart"></div>
+<script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
 
-          <br>
-          <center>
-            <a href="../../typ/index.html" class="linkCheckout" style="color:grey;">No, thanks.</a>
-          </center>
-
+<script>
+opts = {
+key: 'USL-159609-576394-53b72dcfb6eceaa73b5e04dd2c155c57',
+width: '650' ,
+height: '420'
+};
+Upsell.Widget.show(opts);
+</script>
+<!-- HOTMART - Upsell Widget [end] -->
 
         </div>
 
