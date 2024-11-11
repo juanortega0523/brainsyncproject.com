@@ -34,20 +34,15 @@ u{text-decoration-color:#CB0000;cursor:pointer}
 }
 
 .video .video-header {
-  width: 100%; /* Faz o contêiner ocupar toda a largura do vídeo */
-  background: rgba(157, 113, 12, 0.67); /* Cor de fundo dourada */
-  border-radius: 0; /* Remove qualquer arredondamento para ajustar ao vídeo */
+  background: rgba(157, 113, 12, 0.67);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0;
-  position: absolute; /* Garante que o contêiner fica sobreposto ao vídeo */
-  top: 0;
-  left: 0;
-  z-index: 10;
-  text-align: center;
+  flex-direction: row;
+  padding: 5px 10px;
 }
-
 
 .img-headline {
   width: 65%;
