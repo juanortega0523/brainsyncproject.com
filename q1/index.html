@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrology Quiz - Page 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #4b0082, #6a0dad, #8a2be2);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .popup {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            color: #333;
+        }
+        h1 {
+            margin: 0 0 20px;
+            font-size: 1.8rem;
+            color: #000; /* Título preto */
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #6a0dad; /* Borda roxa */
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
+        input:focus {
+            outline: none;
+            border-color: #8a2be2; /* Cor de borda no foco */
+            box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
+        }
+        .progress-bar {
+            background: #f2f2f2;
+            border-radius: 10px;
+            border: 2px solid #6a0dad; /* Borda roxa */
+            padding: 2px; /* Espaço entre a borda e a barra de progresso */
+            height: 16px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-bar .progress {
+            background: #32cd32; /* Barra de progresso verde */
+            height: 100%;
+            width: 25%;
+            border-radius: 6px 0 0 6px;
+        }
+        .send-button {
+            width: 100%;
+            display: none;
+            background: #6a0dad;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            margin: 0 auto 20px;
+        }
+        .send-button:hover {
+            background: #4b0082;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <form id="formPage1">
+            <h1>What's your name?</h1>
+            <input type="text" id="nameInput" placeholder="Enter your name" required>
+            <button type="submit" class="send-button" id="sendButton">Continue</button>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        const sendButton = document.getElementById('sendButton');
+
+        nameInput.addEventListener('input', () => {
+            if (nameInput.value.trim() !== "") {
+                sendButton.style.display = 'block';
+            } else {
+                sendButton.style.display = 'none';
+            }
+        });
+
+        document.getElementById('formPage1').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const nextPage = "question2.html"; // Adicione o link da próxima página
+            window.location.href = nextPage;
+        });
+    </script>
+</body>
+</html>
