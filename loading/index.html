@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f2f2f2; /* Fundo claro */
+            color: #333;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+        }
+        .headline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 40px;
+        }
+        .loading-text {
+            font-size: 1.5rem;
+            color: #8a6d3b; /* Dourado */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .progress-bar {
+            background: #e0e0e0; /* Fundo da barra */
+            border-radius: 10px;
+            padding: 2px;
+            height: 16px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .progress-bar .progress {
+            background: #32cd32; /* Barra de progresso verde */
+            height: 100%;
+            width: 0%;
+            border-radius: 6px;
+            transition: width 2s ease-in-out; /* Animação de progresso */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headline">Find Out Who Your Guardian Angel Is and Access Your Angel's Miraculous Chant</div>
+        <div class="loading-text">LOADING YOUR ANSWERS</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    <script>
+        // Animação da barra de progresso
+        const progressBar = document.querySelector('.progress-bar .progress');
+        progressBar.style.width = '100%';
+
+        // Redirecionar após o carregamento
+        setTimeout(() => {
+            window.location.href = "https://brainsyncproject.com/result/";
+        }, 2000); // Tempo de 2 segundos para redirecionar
+    </script>
+</body>
+</html>
