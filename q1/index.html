@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,8 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #4b0082, #6a0dad, #8a2be2);
-            color: #fff;
+            background: #f9f9f9; /* Fundo branco */
+            color: #333;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -35,13 +34,13 @@
         h1 {
             margin: 0 0 20px;
             font-size: 1.8rem;
-            color: #000; /* Título preto */
+            color: #555; /* Título mais claro */
             font-weight: 600;
         }
         input {
             width: 100%;
             padding: 12px;
-            border: 2px solid #6a0dad; /* Borda roxa */
+            border: 2px solid #ccc; /* Borda cinza */
             border-radius: 8px;
             margin-bottom: 20px;
             font-size: 1rem;
@@ -50,14 +49,13 @@
         }
         input:focus {
             outline: none;
-            border-color: #8a2be2; /* Cor de borda no foco */
+            border-color: #6a0dad; /* Cor de borda no foco */
             box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
         }
         .progress-bar {
-            background: #f2f2f2;
+            background: #e0e0e0; /* Fundo da barra mais claro */
             border-radius: 10px;
-            border: 2px solid #6a0dad; /* Borda roxa */
-            padding: 2px; /* Espaço entre a borda e a barra de progresso */
+            padding: 2px;
             height: 16px;
             width: 100%;
             overflow: hidden;
@@ -72,7 +70,7 @@
         .send-button {
             width: 100%;
             display: none;
-            background: #6a0dad;
+            background: #4caf50; /* Botão verde */
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -83,16 +81,16 @@
             margin: 0 auto 20px;
         }
         .send-button:hover {
-            background: #4b0082;
+            background: #45a049;
         }
     </style>
 </head>
 <body>
     <div class="popup">
         <form id="formPage1">
-            <h1>What's your name?</h1>
+            <h1>What is your first name?</h1>
             <input type="text" id="nameInput" placeholder="Enter your name" required>
-            <button type="submit" class="send-button" id="sendButton">Continue</button>
+            <button type="submit" class="send-button" id="sendButton">SUBMIT MY ANSWER</button>
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
