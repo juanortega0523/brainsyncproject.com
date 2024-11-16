@@ -49,7 +49,7 @@
         .progress-bar .progress {
             background: #32cd32; /* Barra de progresso verde */
             height: 100%;
-            width: 0%;
+            width: 0%; /* Começa em 0% */
             border-radius: 6px;
             transition: width 5s ease-in-out; /* Animação de 5 segundos */
         }
@@ -64,16 +64,18 @@
         </div>
     </div>
     <script>
-        // Animação da barra de progresso
-        const progressBar = document.querySelector('.progress-bar .progress');
-        setTimeout(() => {
-            progressBar.style.width = '100%'; // Barra vai de 0% a 100%
-        }, 0);
+        // Adiciona um atraso para iniciar a animação
+        window.onload = function () {
+            const progressBar = document.querySelector('.progress-bar .progress');
+            setTimeout(() => {
+                progressBar.style.width = '100%'; // Aumenta a largura até 100%
+            }, 100); // Adiciona um pequeno atraso para garantir o movimento
+        };
 
         // Redirecionar após o carregamento
         setTimeout(() => {
             window.location.href = "https://brainsyncproject.com/result/";
-        }, 5000); // Tempo de 5 segundos para redirecionar
+        }, 5000); // Redireciona após 5 segundos
     </script>
 </body>
 </html>
