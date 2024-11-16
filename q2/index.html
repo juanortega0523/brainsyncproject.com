@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,67 +14,73 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #4b0082, #6a0dad, #8a2be2);
-            color: #fff;
+            background: #f9f9f9; /* Fundo branco */
+            color: #333;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .popup {
+        .container {
+            text-align: center;
             background: #fff;
             border-radius: 15px;
-            padding: 20px 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px 30px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 90%;
-            text-align: center;
-            color: #333;
+        }
+        .headline {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            background: #e0e0e0; /* Fundo da barra mais claro */
+            border-radius: 10px;
+            padding: 2px;
+            height: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .progress-bar .progress {
+            background: #32cd32; /* Barra de progresso verde */
+            height: 100%;
+            width: 50%; /* Ajuste para 50% do progresso */
+            border-radius: 6px 0 0 6px;
         }
         h1 {
-            margin: 0 0 20px;
-            font-size: 1.8rem;
-            color: #000;
+            font-size: 1.2rem; /* Tamanho menor para "Question 2" */
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .question {
+            font-size: 1.5rem; /* Tamanho maior para "What is your birth date?" */
+            color: #8a6d3b; /* Cor dourada */
+            margin-bottom: 20px;
             font-weight: 600;
         }
         input {
             width: 100%;
             padding: 12px;
-            border: 2px solid #6a0dad;
+            border: 2px solid #333;
             border-radius: 8px;
             margin-bottom: 20px;
             font-size: 1rem;
             font-family: 'Poppins', sans-serif;
-            color: #333;
+        }
+        input::placeholder {
+            color: #aaa;
         }
         input:focus {
             outline: none;
-            border-color: #8a2be2;
+            border-color: #6a0dad;
             box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
-        }
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            filter: invert(50%) sepia(100%) hue-rotate(240deg) saturate(300%);
-        }
-        .progress-bar {
-            background: #f2f2f2;
-            border-radius: 10px;
-            border: 2px solid #6a0dad;
-            padding: 2px;
-            height: 16px;
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-        }
-        .progress-bar .progress {
-            background: #32cd32;
-            height: 100%;
-            width: 75%;
-            border-radius: 6px 0 0 6px;
         }
         .send-button {
             width: 100%;
-            display: none;
-            background: #6a0dad;
+            background: #4caf50; /* Botão verde */
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -83,39 +88,29 @@
             font-size: 1rem;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
-            margin: 0 auto 20px;
         }
         .send-button:hover {
-            background: #4b0082;
+            background: #45a049;
         }
     </style>
 </head>
 <body>
-    <div class="popup">
+    <div class="container">
+        <div class="headline">Find Out Who Your Guardian Angel Is and Access Your Angel's Miraculous Chant</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h1>Question 2</h1>
+        <div class="question">What is your birth date?</div>
         <form id="formPage2">
-            <h1>What's your birth date?</h1>
-            <input type="date" id="birthDateInput" required>
-            <button type="submit" class="send-button" id="sendButton">Continue</button>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
+            <input type="text" id="birthDateInput" placeholder="Day/Month/Year" required>
+            <button type="submit" class="send-button" id="sendButton">SUBMIT MY ANSWER</button>
         </form>
     </div>
     <script>
-        const birthDateInput = document.getElementById('birthDateInput');
-        const sendButton = document.getElementById('sendButton');
-
-        birthDateInput.addEventListener('input', () => {
-            if (birthDateInput.value.trim() !== "") {
-                sendButton.style.display = 'block';
-            } else {
-                sendButton.style.display = 'none';
-            }
-        });
-
         document.getElementById('formPage2').addEventListener('submit', function (event) {
             event.preventDefault();
-            const nextPage = "page3.html"; // Adicione o link da próxima página
+            const nextPage = "question3.html"; // Adicione o link da próxima página
             window.location.href = nextPage;
         });
     </script>
