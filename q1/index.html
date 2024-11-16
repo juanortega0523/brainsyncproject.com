@@ -21,36 +21,20 @@
             justify-content: center;
             align-items: center;
         }
-        .popup {
+        .container {
+            text-align: center;
             background: #fff;
             border-radius: 15px;
-            padding: 20px 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            padding: 30px 30px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 90%;
-            text-align: center;
-            color: #333;
         }
-        h1 {
-            margin: 0 0 20px;
-            font-size: 1.8rem;
-            color: #555; /* Título mais claro */
+        .headline {
+            font-size: 1.2rem;
             font-weight: 600;
-        }
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #ccc; /* Borda cinza */
-            border-radius: 8px;
+            color: #555;
             margin-bottom: 20px;
-            font-size: 1rem;
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-        }
-        input:focus {
-            outline: none;
-            border-color: #6a0dad; /* Cor de borda no foco */
-            box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
         }
         .progress-bar {
             background: #e0e0e0; /* Fundo da barra mais claro */
@@ -58,8 +42,7 @@
             padding: 2px;
             height: 16px;
             width: 100%;
-            overflow: hidden;
-            position: relative;
+            margin-bottom: 20px;
         }
         .progress-bar .progress {
             background: #32cd32; /* Barra de progresso verde */
@@ -67,9 +50,27 @@
             width: 25%;
             border-radius: 6px 0 0 6px;
         }
+        h1 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        input:focus {
+            outline: none;
+            border-color: #6a0dad;
+            box-shadow: 0 0 4px rgba(138, 43, 226, 0.5);
+        }
         .send-button {
             width: 100%;
-            display: none;
             background: #4caf50; /* Botão verde */
             color: #fff;
             border: none;
@@ -78,7 +79,6 @@
             font-size: 1rem;
             font-family: 'Poppins', sans-serif;
             cursor: pointer;
-            margin: 0 auto 20px;
         }
         .send-button:hover {
             background: #45a049;
@@ -86,28 +86,18 @@
     </style>
 </head>
 <body>
-    <div class="popup">
+    <div class="container">
+        <div class="headline">Find Out Who Your Guardian Angel Is and Access Your Angel's Miraculous Chant</div>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <h1>Question 1</h1>
         <form id="formPage1">
-            <h1>What is your first name?</h1>
             <input type="text" id="nameInput" placeholder="Enter your name" required>
             <button type="submit" class="send-button" id="sendButton">SUBMIT MY ANSWER</button>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
         </form>
     </div>
     <script>
-        const nameInput = document.getElementById('nameInput');
-        const sendButton = document.getElementById('sendButton');
-
-        nameInput.addEventListener('input', () => {
-            if (nameInput.value.trim() !== "") {
-                sendButton.style.display = 'block';
-            } else {
-                sendButton.style.display = 'none';
-            }
-        });
-
         document.getElementById('formPage1').addEventListener('submit', function (event) {
             event.preventDefault();
             const nextPage = "question2.html"; // Adicione o link da próxima página
