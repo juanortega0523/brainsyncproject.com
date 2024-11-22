@@ -110,56 +110,7 @@
 
     <!-- End BG tracking Code -->
 
-    <script>
-  const findButton = setInterval(function () {
-    const buttonCheckout = document.querySelector(
-      ".button.linkCheckout.link-stored.cta"
-    );
-
-    if (buttonCheckout) {
-      clearInterval(findButton);
-
-      buttonCheckout.onclick = function (e) {
-        e.preventDefault();
-
-        const params = new URLSearchParams(window.location.search);
-        const currentURL = new URL(window.location.href);
-        const nextURLPage = new URL(
-          "https://brainsyncproject.com/clk/offer/?aff_id=18"
-        );
-
-        const utmSource = currentURL.searchParams.get("utm_source");
-        const utmCampaign = currentURL.searchParams.get("utm_campaign");
-        const utmMedium = currentURL.searchParams.get("utm_medium");
-        const utmContent = currentURL.searchParams.get("utm_content");
-        const utmTerm = currentURL.searchParams.get("utm_term");
-
-        nextURLPage.searchParams.set(
-          "subid",
-          utmSource ? utmSource.replace("|", "*") : null
-        );
-        nextURLPage.searchParams.set(
-          "subid2",
-          utmCampaign ? utmCampaign.replace("|", "*") : null
-        );
-        nextURLPage.searchParams.set(
-          "subid3",
-          utmMedium ? utmMedium.replace("|", "*") : null
-        );
-        nextURLPage.searchParams.set(
-          "subid4",
-          utmContent ? utmContent.replace("|", "*") : null
-        );
-        nextURLPage.searchParams.set(
-          "subid5",
-          utmTerm ? utmTerm.replace("|", "*") : null
-        );
-
-        window.location.href = nextURLPage.href;
-      };
-    }
-  }, 500);
-</script>
+  
 
   </head>
   <body id="app">
