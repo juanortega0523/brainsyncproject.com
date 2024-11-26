@@ -326,26 +326,23 @@ a.linkCheckout{
     }
 }
 
+/* Torna o vídeo interativo novamente */
 iframe {
-  pointer-events: none; /* Desativa interações com o iframe */
+  pointer-events: auto;
   position: relative;
   z-index: 1;
 }
 
-iframe::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent; /* Permite a visibilidade do vídeo */
-  z-index: 2;
-  pointer-events: none;
-}
-
-.ytp-chrome-bottom, /* Remove a barra inferior */
-.ytp-chrome-top-buttons, /* Remove os botões do topo */
-.ytp-watermark { /* Remove a logo do YouTube */
+/* Oculta a logo do YouTube, marca d'água e os três pontinhos */
+iframe::-webkit-media-controls-enclosure,
+iframe::-webkit-media-controls-play-button,
+iframe::-webkit-media-controls-timeline {
   display: none !important;
 }
+
+.ytp-watermark, /* Remove a marca d'água do YouTube */
+.ytp-chrome-bottom, /* Remove a barra inferior */
+.ytp-chrome-top-buttons { /* Remove os botões de menu no topo */
+  display: none !important;
+}
+
