@@ -326,23 +326,4 @@ a.linkCheckout{
     }
 }
 
-/* Torna o vídeo interativo novamente */
-iframe {
-  pointer-events: auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Oculta a logo do YouTube, marca d'água e os três pontinhos */
-iframe::-webkit-media-controls-enclosure,
-iframe::-webkit-media-controls-play-button,
-iframe::-webkit-media-controls-timeline {
-  display: none !important;
-}
-
-.ytp-watermark, /* Remove a marca d'água do YouTube */
-.ytp-chrome-bottom, /* Remove a barra inferior */
-.ytp-chrome-top-buttons { /* Remove os botões de menu no topo */
-  display: none !important;
-}
 
