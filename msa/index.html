@@ -161,20 +161,23 @@
                 </a>
               </div>
               
+              <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
               <script>
-                // Aguarde o carregamento do player Wistia
+                // Verifica o carregamento do Wistia Player
                 window._wq = window._wq || [];
                 _wq.push({
-                  id: "eere9i95nu", // Substitua pelo ID do vídeo Wistia
+                  id: "eere9i95nu", // Substitua pelo ID correto do vídeo
                   onReady: function (video) {
                     console.log("Wistia player is ready!");
               
                     // Monitore o progresso do vídeo
                     video.bind("timechange", function (time) {
-                      // Ajuste o tempo para teste (5 segundos = 5)
+                      console.log("Current time:", time); // Exibe o tempo no console para depuração
+              
+                      // Exibe o botão após 5 segundos (tempo de teste)
                       if (time >= 5) {
-                        console.log("Button is now visible!");
                         document.getElementById("cta-container").style.display = "block";
+                        console.log("Button displayed!");
                       }
                     });
                   },
