@@ -145,109 +145,77 @@
           </div>
 
               <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/eere9i95nu.js" async type="module"></script><style>wistia-player[media-id='eere9i95nu']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/eere9i95nu/swatch'); display: block; filter: blur(5px); padding-top:176.39%; }</style> <wistia-player media-id="eere9i95nu"></wistia-player>
-              <!DOCTYPE html>
-              <html lang="en">
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>BrainSync Project</title>
-                <script
-                  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-                  data-utmify-prevent-subids
-                  async
-                  defer
-                ></script>
-                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-                <style>
-                  .cta-container {
-                    text-align: center;
-                    margin-top: 20px;
-                  }
-                  .cta {
-                    text-decoration: none;
-                    background: linear-gradient(315deg, #FF1316, #D60B0D, #FF1316, #D60B0D);
-                    background-size: 500% 500%;
-                    animation: cta2 6s ease infinite;
-                    border: none;
-                    font-size: 1.2em;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    text-align: center;
-                    padding: 10px 20px;
-                    margin: 10px auto;
-                    display: inline-block;
-                    color: #fff;
-                    cursor: pointer;
-                    border-radius: 0.4em;
-                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-                  }
-                  .cta:hover {
-                    background-image: linear-gradient(to bottom, #FF1316 0%, #D60B0D 100%);
-                  }
-                  @keyframes cta2 {
-                    0% {
-                      background-position: 0% 50%;
-                    }
-                    50% {
-                      background-position: 100% 51%;
-                    }
-                    100% {
-                      background-position: 0% 50%;
-                    }
-                  }
-                </style>
-              </head>
-              <body style="background-color: black; color: white;">
-                <main>
-                  <div class="video">
-                    <script src="https://fast.wistia.com/player.js" async></script>
-                    <script src="https://fast.wistia.com/embed/eere9i95nu.js" async type="module"></script>
-                    <style>
-                      wistia-player[media-id="eere9i95nu"]:not(:defined) {
-                        background: center / contain no-repeat url("https://fast.wistia.com/embed/medias/eere9i95nu/swatch");
-                        display: block;
-                        filter: blur(5px);
-                        padding-top: 176.39%;
+              <div id="cta-container" class="cta-container" style="display: none;">
+                <p style="color: white; font-size: 1.2em; margin: 0; font-weight: bold;">
+                  NORMAL PRICE: <span style="color: red; text-decoration: line-through;">$130</span>
+                </p>
+                <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 5px 0;">
+                  TODAY ONLY: <span style="color: green;">$29</span>
+                </p>
+                <a 
+                  href="https://www.brainsyncproject.shop/29" 
+                  target="_self" 
+                  class="cta" 
+                  data-utmify-prevent-subids>
+                  Access BrainSync Angel ➤
+                </a>
+              </div>
+              
+              <script>
+                // Wistia player tracking
+                window._wq = window._wq || [];
+                _wq.push({
+                  id: "eere9i95nu",
+                  onReady: function (video) {
+                    console.log("Wistia video ready!");
+              
+                    video.bind("timechange", function (time) {
+                      if (time >= 2755) {
+                        document.getElementById("cta-container").style.display = "block";
                       }
-                    </style>
-                    <wistia-player media-id="eere9i95nu"></wistia-player>
-                  </div>
-              
-                  <div id="cta-container" class="cta-container" style="display: none;">
-                    <p style="color: white; font-size: 1.2em; margin: 0; font-weight: bold;">
-                      NORMAL PRICE: <span style="color: red; text-decoration: line-through;">$130</span>
-                    </p>
-                    <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 5px 0;">
-                      TODAY ONLY: <span style="color: green;">$29</span>
-                    </p>
-                    <a 
-                      href="https://www.brainsyncproject.shop/29" 
-                      target="_self" 
-                      class="cta" 
-                      data-utmify-prevent-subids>
-                      Access BrainSync Angel ➤
-                    </a>
-                  </div>
-              
-                  <script>
-                    // Wistia player tracking
-                    window._wq = window._wq || [];
-                    _wq.push({
-                      id: "eere9i95nu",
-                      onReady: function (video) {
-                        console.log("Wistia video ready!");
-              
-                        video.bind("timechange", function (time) {
-                          if (time >= 2755) {
-                            document.getElementById("cta-container").style.display = "block";
-                          }
-                        });
-                      },
                     });
-                  </script>
-                </main>
-              </body>
-              </html>
+                  },
+                });
+              </script>
+              
+              <style>
+                .cta-container {
+                  text-align: center;
+                  margin-top: 20px;
+                }
+                .cta {
+                  text-decoration: none;
+                  background: linear-gradient(315deg, #FF1316, #D60B0D, #FF1316, #D60B0D);
+                  background-size: 500% 500%;
+                  animation: cta2 6s ease infinite;
+                  border: none;
+                  font-size: 1.2em;
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  text-align: center;
+                  padding: 10px 20px;
+                  margin: 10px auto;
+                  display: inline-block;
+                  color: #fff;
+                  cursor: pointer;
+                  border-radius: 0.4em;
+                  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+                }
+                .cta:hover {
+                  background-image: linear-gradient(to bottom, #FF1316 0%, #D60B0D 100%);
+                }
+                @keyframes cta2 {
+                  0% {
+                    background-position: 0% 50%;
+                  }
+                  50% {
+                    background-position: 100% 51%;
+                  }
+                  100% {
+                    background-position: 0% 50%;
+                  }
+                }
+              </style>
               
 
         </div>
