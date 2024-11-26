@@ -325,3 +325,27 @@ a.linkCheckout{
         background-position:0% 50%
     }
 }
+
+iframe {
+  pointer-events: none; /* Desativa interações com o iframe */
+  position: relative;
+  z-index: 1;
+}
+
+iframe::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Permite a visibilidade do vídeo */
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ytp-chrome-bottom, /* Remove a barra inferior */
+.ytp-chrome-top-buttons, /* Remove os botões do topo */
+.ytp-watermark { /* Remove a logo do YouTube */
+  display: none !important;
+}
