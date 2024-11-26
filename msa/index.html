@@ -162,15 +162,18 @@
               </div>
               
               <script>
-                // Wistia player tracking
+                // Aguarde o carregamento do player Wistia
                 window._wq = window._wq || [];
                 _wq.push({
-                  id: "eere9i95nu",
+                  id: "eere9i95nu", // Substitua pelo ID do vídeo Wistia
                   onReady: function (video) {
-                    console.log("Wistia video ready!");
+                    console.log("Wistia player is ready!");
               
+                    // Monitore o progresso do vídeo
                     video.bind("timechange", function (time) {
+                      // Ajuste o tempo para teste (5 segundos = 5)
                       if (time >= 5) {
+                        console.log("Button is now visible!");
                         document.getElementById("cta-container").style.display = "block";
                       }
                     });
@@ -216,6 +219,7 @@
                   }
                 }
               </style>
+              
               
 
         </div>
