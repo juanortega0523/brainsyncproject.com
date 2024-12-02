@@ -189,9 +189,16 @@
 
         <div class="p-2 rounded-lg shadow-md bg-white mt-4 text-black flex flex-col justify-center items-center">
 
-          <a href="https://buygoods.com/secure/upsell/?account_id=9069&product_codename=gat1u&redirect=aHR0cHM6Ly9icmFpbnN5bmNwcm9qZWN0LmNvbS90eXAv" class="cta">YES! I WANT THIS UPGRADE</a>
-          <br>
-          <a href="https://brainsyncproject.com/bsp-processing/d4/" class="linkCheckout">No, thanks.</a>
+ <!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
+
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
           
 
         </div>
