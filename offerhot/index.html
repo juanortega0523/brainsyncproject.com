@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js no-svg" data-op3-support="no-js no-svg no-webp no-avif">
+  <head>
+  
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="BrainSync Project">
+    <title>BrainSync Project</title>
+
+    <meta property="og:title" content="BrainSync Project" />
+    <meta property="og:description" content="YOU HAVE WON A 70% DISCOUNT COUPON. Only 7 slots left..." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "h8lwgi8kjc");
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '926421741970298');
+      fbq('track', 'AddToCart');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=926421741970298&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script id="wpcp_disable_selection" type="text/javascript">
+      var image_save_msg='You are not allowed to save images!';
+      	var no_menu_msg='Context Menu disabled!';
+      	var smessage = "";
+
+      function disableEnterKey(e)
+      {
+      	var elemtype = e.target.tagName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+      	{
+      		elemtype = 'TEXT';
+      	}
+
+      	if (e.ctrlKey){
+           var key;
+           if(window.event)
+                key = window.event.keyCode;     //IE
+           else
+                key = e.which;     //firefox (97)
+          //if (key != 17) alert(key);
+           if (elemtype!= 'TEXT' && (key == 97 || key == 65 || key == 67 || key == 99 || key == 88 || key == 120 || key == 26 || key == 85  || key == 86 || key == 83 || key == 43 || key == 73))
+           {
+      		if(wccp_free_iscontenteditable(e)) return true;
+      		show_wpcp_message('You are not allowed to copy content or view source');
+      		return false;
+           }else
+           	return true;
+           }
+      }
+
+
+      /*For contenteditable tags*/
+      function wccp_free_iscontenteditable(e)
+      {
+      	var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+      	var target = e.target || e.srcElement;
+
+      	var elemtype = e.target.nodeName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	var iscontenteditable = "false";
+
+      	if(typeof target.getAttribute!="undefined" ) iscontenteditable = target.getAttribute("contenteditable"); // Return true or false as string
+
+      	var iscontenteditable2 = false;
+
+      	if(typeof target.isContentEditable!="undefined" ) iscontenteditable2 = target.isContentEditable; // Return true or false as boolean
+
+      	if(target.parentElement.isContentEditable) iscontenteditable2 = true;
+
+      	if (iscontenteditable == "true" || iscontenteditable2 == true)
+      	{
+      		if(typeof target.style!="undefined" ) target.style.cursor = "text";
+
+      		return true;
+      	}
+      }
+
+      ////////////////////////////////////
+      function disable_copy(e)
+      {
+      	var e = e || window.event; // also there is no e.target property in IE. instead IE uses window.event.srcElement
+
+      	var elemtype = e.target.tagName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if (elemtype == "TEXT" || elemtype == "TEXTAREA" || elemtype == "INPUT" || elemtype == "PASSWORD" || elemtype == "SELECT" || elemtype == "OPTION" || elemtype == "EMBED")
+      	{
+      		elemtype = 'TEXT';
+      	}
+
+      	if(wccp_free_iscontenteditable(e)) return true;
+
+      	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+
+      	var checker_IMG = '';
+      	if (elemtype == "IMG" && checker_IMG == 'checked' && e.detail >= 2) {show_wpcp_message(alertMsg_IMG);return false;}
+      	if (elemtype != "TEXT")
+      	{
+      		if (smessage !== "" && e.detail == 2)
+      			show_wpcp_message(smessage);
+
+      		if (isSafari)
+      			return true;
+      		else
+      			return false;
+      	}
+      }
+
+      //////////////////////////////////////////
+      function disable_copy_ie()
+      {
+      	var e = e || window.event;
+      	var elemtype = window.event.srcElement.nodeName;
+      	elemtype = elemtype.toUpperCase();
+      	if(wccp_free_iscontenteditable(e)) return true;
+      	if (elemtype == "IMG") {show_wpcp_message(alertMsg_IMG);return false;}
+      	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "OPTION" && elemtype != "EMBED")
+      	{
+      		return false;
+      	}
+      }
+      function reEnable()
+      {
+      	return true;
+      }
+      document.onkeydown = disableEnterKey;
+      document.onselectstart = disable_copy_ie;
+      if(navigator.userAgent.indexOf('MSIE')==-1)
+      {
+      	document.onmousedown = disable_copy;
+      	document.onclick = reEnable;
+      }
+      function disableSelection(target)
+      {
+          //For IE This code will work
+          if (typeof target.onselectstart!="undefined")
+          target.onselectstart = disable_copy_ie;
+
+          //For Firefox This code will work
+          else if (typeof target.style.MozUserSelect!="undefined")
+          {target.style.MozUserSelect="none";}
+
+          //All other  (ie: Opera) This code will work
+          else
+          target.onmousedown=function(){return false}
+          target.style.cursor = "default";
+      }
+      //Calling the JS function directly just after body load
+      window.onload = function(){disableSelection(document.body);};
+
+      //////////////////special for safari Start////////////////
+      var onlongtouch;
+      var timer;
+      var touchduration = 1000; //length of time we want the user to touch before we do something
+
+      var elemtype = "";
+      function touchstart(e) {
+      	var e = e || window.event;
+        // also there is no e.target property in IE.
+        // instead IE uses window.event.srcElement
+        	var target = e.target || e.srcElement;
+
+      	elemtype = window.event.srcElement.nodeName;
+
+      	elemtype = elemtype.toUpperCase();
+
+      	if(!wccp_pro_is_passive()) e.preventDefault();
+      	if (!timer) {
+      		timer = setTimeout(onlongtouch, touchduration);
+      	}
+      }
+
+      function touchend() {
+          //stops short touches from firing the event
+          if (timer) {
+              clearTimeout(timer);
+              timer = null;
+          }
+      	onlongtouch();
+      }
+
+      onlongtouch = function(e) { //this will clear the current selection if anything selected
+
+      	if (elemtype != "TEXT" && elemtype != "TEXTAREA" && elemtype != "INPUT" && elemtype != "PASSWORD" && elemtype != "SELECT" && elemtype != "EMBED" && elemtype != "OPTION")
+      	{
+      		if (window.getSelection) {
+      			if (window.getSelection().empty) {  // Chrome
+      			window.getSelection().empty();
+      			} else if (window.getSelection().removeAllRanges) {  // Firefox
+      			window.getSelection().removeAllRanges();
+      			}
+      		} else if (document.selection) {  // IE?
+      			document.selection.empty();
+      		}
+      		return false;
+      	}
+      };
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+          window.addEventListener("touchstart", touchstart, false);
+          window.addEventListener("touchend", touchend, false);
+      });
+
+      function wccp_pro_is_passive() {
+
+        var cold = false,
+        hike = function() {};
+
+        try {
+      	  const object1 = {};
+        var aid = Object.defineProperty(object1, 'passive', {
+        get() {cold = true}
+        });
+        window.addEventListener('test', hike, aid);
+        window.removeEventListener('test', hike, aid);
+        } catch (e) {}
+
+        return cold;
+      }
+      /*special for safari End*/
+    </script>
+    <script type="text/javascript">
+      document.ondragstart = function() { return false;}
+      	function nocontext(e) {
+      	   return false;
+      	}
+      	document.oncontextmenu = nocontext;
+    </script>
+    <script type="text/javascript">
+      var e = document.getElementsByTagName('body')[0];
+      if(e)
+      {
+      	e.setAttribute('unselectable',"on");
+      }
+    </script>
+    <link rel="stylesheet" href="css/master.css">
+
+    <script src="js/lazyload.js" charset="utf-8"></script>
+    <script src="js/redirect.js" charset="utf-8"></script>
+
+  </head>
+  <body class="bg-black">
+
+    <section id="section1" class="pt-12 pb-8 md:py-12 bg-transparent text-white" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+      <div class="container px-4 md:p-0 mx-auto text-center">
+        <h1 class="text-2xl md:text-5xl font-extrabold italic text-yellow-300">YOU HAVE JUST WON A GIFT!</h1>
+      </div>
+      <div class="container max-w-3xl px-4 md:p-0 mt-4 mx-auto text-center">
+        <p class="text-sm md:text-xl mt-4"><b>ONLY 13 PEOPLE</b> WATCHED THE PRESENTATION UNTIL THE END, YOU ARE ONE OF THEM!</p>
+        <p class="text-xs md:text-xl mt-4">AS A REWARD, YOU GET A WHOPPING 70% OFF COUPON.</p>
+      </div>
+
+      <div class="flex flex-col justify-center items-center">
+        <img class="md:max-w-[400px] w-[320px]" src="img/DESCUE_1.png" alt="70%">
+        <p class="mb-2 font-bold italic">Just 7 spots remaining...</p>
+        <img class="md:max-w-screen-sm max-w-screen-md" src="img/7cupos-titileante-opdb-op645d920319b015-82872380__opdb-op645f526a5d96a6-61532757.gif" alt="7spots">
+      </div>
+
+      <div class="px-4 md:p-0">
+        <div class="container max-w-3xl p-0 mx-auto text-center mt-16 rounded-lg" style="background-image: url('img/barra-roja-1024x105-1-opdb-op63e31a8a04a1f9-52333545-opdb-op6423b9b99bb305-03511241-opdb-op644884d9601c09-24808361-opdb-op645d920319b015-82872380__opdb-op645f526a5d96a6-61532757.jpeg');">
+          <div class="md:p-8 px-2 pb-6 pt-8 relative">
+            <img class="w-[60px] mx-auto block shadow-md" style="position: absolute;top: -30px;transform: translateX(50%);right: 50%;" src="img/alert-red-opdb-op644884d9601c09-24808361-opdb-op645d920319b015-82872380__opdb-op645f526a5d96a6-61532757.png" alt="attention">
+            <p class="text-sm md:text-base mt-4 font-light"><b class="font-bold">ATTENTION:</b> You have just 10 minutes to claim your discounted spot. If not, the discount will expire and you will lose your vacancy. Tap the button and claim your spot before time runs out.</p>
+            <!-- <p class="text-sm md:text-base font-bold mt-3">(This page may be taken down very soon)</p> -->
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="bg-transparent text-zinc-900 py-2 md:py-4 px-2 flex justify-center items-center gap-4 sticky top-0 z-100" style="z-index: 10000; background-image:radial-gradient(at center center, rgb(254, 229, 161) 13%, rgb(204, 160, 94) 70%);">
+      <img class="w-[54px]" src="img/Gift-dorado.webp" alt="image">
+      <p id="banner_text" class="text-base font-bold uppercase leading-tight">This discount <b>expires in</b></p>
+      <a href="https://www.brainsyncproject.shop/
+      " id="banner_cta" class="button block py-2 px-4 bg-white rounded-lg shadow-md leading-tight font-bold text-sm" style="display:none;">TAP TO CONTINUE ></a>
+      <div id="countdown" class="flex gap-2 border-black border p-2"><span>16</span> min <span>30</span> sec</div>
+      <script>var target_date = new Date().getTime() + (1000*60*10); // set the countdown date
+        var days, hours, minutes, seconds; // variables for time units
+
+        var countdown = document.getElementById("countdown"); // get tag element
+
+        getCountdown();
+
+        setInterval(function () { getCountdown(); }, 1000);
+
+        function getCountdown(){
+
+          // find the amount of "seconds" between now and target
+          var current_date = new Date().getTime();
+          var seconds_left = (target_date - current_date) / 1000;
+
+          days = pad( parseInt(seconds_left / 86400) );
+          seconds_left = seconds_left % 86400;
+
+          hours = pad( parseInt(seconds_left / 3600) );
+          seconds_left = seconds_left % 3600;
+
+          minutes = pad( parseInt(seconds_left / 60) );
+          seconds = pad( parseInt( seconds_left % 60 ) );
+
+          if (parseInt(seconds_left / 60) < 0) {
+            minutes = pad(0);
+          }
+
+          if (parseInt( seconds_left % 60 ) <= 0) {
+            seconds = pad(0);
+          }
+
+          if (parseInt(seconds_left / 60) <= 0 && parseInt( seconds_left % 60 ) <= 0) {
+            countdown.style.display = "none";
+            document.getElementById('banner_cta').style.display = "block";
+            document.getElementById('banner_text').innerHTML = "THIS IS <b>YOUR LAST CHANCE</b>";
+          }
+
+          // format countdown string + set tag value
+          countdown.innerHTML = '<span>' + minutes + '</span> min <span>' + seconds + '</span> sec';
+        }
+
+        function pad(n) {
+          return (n < 10 ? '0' : '') + n;
+        }
+
+      </script>
+    </section>
+
+    <section class="py-12 md:py-16 bg-white text-gray">
+      <div class="container max-w-3xl px-4 md:px-0 mx-auto">
+        <div class="flex flex-col justify-center items-center gap-4 mb-8">
+          <div class="w-full text-center">
+            <h3 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU WILL RECEIVE TODAY?</h3>
+            <p class="mb-2">The BrainSync Project is a completely DIGITAL method, where you'll receive the powerful Gateway Project frequencies online (plus much more). If these potent Gateway frequencies were delivered physically, like a pizza, we'd face delivery fees and restrictions for many countries worldwide.</p>
+
+            <img class="w-full laz mt-4" src="img/familyshot.png" alt="image">
+            <p class="text-xs text-zinc-500 italic mb-8">* All of these programs are entirely digital, ensuring you have immediate access from your home, be it on your mobile phone or desktop, no matter where you are located.</p>
+
+            <p class="mb-2">Hence, I've made these frequencies available entirely online. This approach ensures INSTANT access - no matter where you are.</p>
+            <p>In that way, you can enjoy these powerful frequencies from the comfort of your home, anytime, straight from your mobile device or desktop, making the transformational journey accessible to all and without worrying about high delivery fees.</p>
+
+          </div>
+        </div>
+
+        <center><hr class="border-2 border-[#bba880] max-w-[200px] text-center mt-16 md:mt-20"></center>
+        <h3 class="text-3xl md:text-4xl font-bold text-center mt-2">BrainSync Project + 6 SUPER Bonuses</h3>
+      </div>
+
+      <div class="container max-w-4xl px-4 md:px-0 mx-auto">
+        <div class="grid grid-cols-1 gap-6 mt-4 w-full mx-auto">
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/frontend.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">BrainSync Project</p>
+                <p class="text-lg mt-4 text-zinc-700">You will unleash a torrent of energy, abundance, and prosperity in your life, with proper synchronization of your brain hemispheres and your pineal gland, alongside purging traumas that obstruct the free flow of your vibrational energy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b1.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">Energetic Ignition: The 7 Chakra Tune-Up</p>
+                <p class="text-lg mt-4 text-zinc-700">You will receive a series of sounds and meditations, meticulously designed to activate your seven chakras, optimizing the flow of your bio-energy. This isn't just about feeling energized; it's about sparking a radiant, sustained clarity and amplified creativity that lasts all day, every day.</p>
+              </div>
+            </div>
+            <div class="px-4 md:px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$197</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b2.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">Cosmic key: The Gateway Project Unveiled</p>
+                <p class="text-lg mt-4 text-zinc-700">An in-depth manual on the Gateway project, where the ordinary reality you know makes way for the extraordinary. This bonus doesn't just reveal secrets; it serves as a beacon, lighting the path to a new perception of existence, where reality is malleable, and the metaphysical becomes your playground.</p>
+              </div>
+            </div>
+            <div class="px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$67</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b3.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">The Master Manifestation Blueprint</p>
+                <p class="text-lg mt-4 text-zinc-700">You will receive a powerful guide on the art of visualization and manifestation. With this bonus, your thoughts won't just remain thoughts; they become powerful tools that can bring about immediate, real-life results. Dreaming becomes doing, aspirations transform into achievements.</p>
+              </div>
+            </div>
+            <div class="px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$97</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b6.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">Unveiled Secrets Uncovered - Gateway Project</p>
+                <p class="text-lg mt-4 text-zinc-700">This is your ticket into a clandestine world. This extraordinary collection boasts original, and even yet to be declassified, CIA reports on the Gateway Project. It's an exclusive key to a secretive vault of wisdom. Imagine having access to these captivating revelations, feeling the weight of these powerful truths. This project is the revelation of the century and now you have this power in your hands.</p>
+              </div>
+            </div>
+            <div class="px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$47</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b4.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">Celestial Cipher: Decoding the Universe's Secrets</p>
+                <p class="text-lg mt-4 text-zinc-700">A mystical guide that discloses the techniques of understanding the universe's nuanced signals. By deciphering these indicators, you'll achieve an upper hand in life. Perfecting this ability will not only grant spiritual awakening; it will also skyrocket your personal development and prosperity to extraordinary levels. Brace yourself for pleasing revelations as you decrypt the celestial cipher.</p>
+              </div>
+            </div>
+            <div class="px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$67</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+          <div class="bg-transparent shadow-lg text-zinc-900 rounded-lg text-center">
+            <div class="px-4 pb-4 pt-8 flex flex-col md:flex-row items-center gap-2 md:gap-6">
+              <div class="w-full md:w-1/3">
+                <img class="w-full laz" src="img/bsp-b5.png" alt="image">
+              </div>
+              <div class="w-full md:w-2/3 text-center md:text-left">
+                <p class="text-3xl font-bold leading-tight mb-1 text-black">The Cosmic Voyager: Unleashing Astral Tanscendence</p>
+                <p class="text-lg mt-4 text-zinc-700">Channeling the transformative power of theta waves - your sonic passport to transcend the physical and explore the astral plane. This unique frequency invites you to liberate your consciousness, like a celestial trailblazer, voyaging through unseen dimensions. These sonic keys allow you to metamorphose from an earthly entity to an astral adventurer in an extremely vivid way. It’s time to transcend!</p>
+              </div>
+            </div>
+            <div class="px-12 py-2 mt-4 border-t-2 bg-gray-100 border-[#bba880] text-[#bba880] flex justify-between items-center">
+              <p class="text-xl leading-tight">NORMAL PRICE: <s class="font-bold">$47</s></p>
+              <p class="text-xl leading-tight font-bold">TODAY: FREE!</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="section2" class="py-8 px-0 md:py-16 bg-white text-black">
+      <div class="container max-w-4xl mx-auto text-center px-2 md:px-0 mb-16 md:mb-28">
+        <p class="text-base md:text-lg text-[#bba880] font-bold mb-1">THIS IS WHAT YOU WILL RECEIVE WHEN YOU...</p>
+        <p class="font-extrabold text-3xl md:text-5xl ">Access the "BRAINSYNC PROJECT"</p>
+      </div>
+      <br>
+      <div class="pt-4 pb-8 md:py-12 bg-transparent text-white rounded-lg md:rounded-3xl" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+        <div class="w-full max-w-2xl mx-auto -mt-20 md:-mt-32 pb-8 px-2 md:pb-8 text-center">
+          <img class="w-full md:scale-125 mb-8 laz" src="img/familyshot.png" alt="image">
+          <p class="text-xl font-bold">NORMAL PRICE: <s class="font-bold text-red-500">US$ 130</s></p>
+          <p class="text-6xl md:text-8xl text-green-500 font-extrabold mt-2">US$ 39</p>
+
+          <p class="text-lg md:text-xl font-bold mt-8">TODAY ONLY WITH:</p>
+          <p class="text-lg font-light">70% Discount</p>
+
+          <a href="https://www.brainsyncproject.shop/""
+          class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-xl md:text-2xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-10 border-b-4 border-[#83663b]" ><span class="drop-shadow">Tap here to access BrainSync Project</span></a>
+          <img class="max-w-full mx-auto mt-2 laz" src="img/pay-1-1.webp" alt="payment_methods">
+          <a href="https://www.brainsyncproject.shop/""
+          " class="text-blue-500 underline block mt-3">Click here to buy "BrainSync Project" in your local currency</a>
+          <p class="text-zinc-200 mt-16 text-sm italic">*This offer may expire at any time</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-16 bg-white text-black">
+      <div class="container max-w-4xl px-4 md:px-0 mx-auto">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
+          <div class="w-2/3 md:w-1/3">
+            <img class="w-full laz" src="img/money_back_2.png" alt="image">
+          </div>
+          <div class="w-full md:w-2/3 text-center md:text-left">
+            <p class="text-3xl md:text-4xl font-bold mb-4 md:mb-6">No risk, 30-day warranty</p>
+            <p class="text-base md:text-lg">If you find the program is not up to par or doesn't match your expectations, you're entitled to a fuss-free, full refund. This is why we're committed to your satisfaction, so we're giving you a full week to explore the program and determine if it fulfills your expectations! </p>
+          </div>
+        </div>
+        <a href="https://www.brainsyncproject.shop/
+        " class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-center text-black font-bold text-xl md:text-2xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-10 border-b-4 border-[#83663b]" ><span class="drop-shadow">Click here to claim your triple guarantee of the universe!</span></a>
+      </div>
+    </section>
+
+
+
+
+    <section id="section2-1" class="pt-8 md:px-0 md:pt-16 bg-white text-black">
+      <div class="pt-4 pb-8 md:py-12 bg-transparent text-white" style="background-image:radial-gradient(at center center, #2a2b2f 10%, rgb(2, 4, 8) 87%);">
+        <div class="w-full max-w-2xl mx-auto py-8 px-4 md:p-8 text-center">
+          <h2 class="text-3xl md:text-5xl font-extrabold">THIS IS WHAT YOU WILL RECEIVE...</h2>
+          <p class="mt-6 text-xl font-extrabold text-green-500">70% DISCOUNT</p>
+          <p class="text-lg md:text-xl font-extrabold">ACTIVATED ONLY TODAY!</p>
+          <img class="w-full md:scale-125 mt-10 mb-8 laz" src="img/familyshot.png" alt="image">
+          <p class="text-zinc-400 mt-2 text-sm italic">* Digital Product</p>
+
+          <p class="text-xl font-bold mt-8">All this should cost <s class="font-bold text-red-500">US$ 1769</s></p>
+          <p class="text-xl font-bold mt-8 mb-2">NORMAL PRICE: <s class="font-bold text-red-500">US$ 130</s></p>
+          <p class="text-6xl md:text-8xl font-extrabold text-green-500"> US$ 39</p>
+
+          <div class="flex flex-col justify-center mt-12">
+            <ul class="space-y-4 list-inside mx-auto">
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>BrainSync Project</b> <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">141$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>Energetic Ignition</b>: The 7 Chackra Tune-Up <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">197$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>Cosmic Key</b>: The Gateway Project Unveiled <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">67$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>The Master Manifestation Blueprint</b> <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">97$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>Unveiled Secrets Uncovered</b> - Gateway Project <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">47$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>Celestial Cipher</b>: Decoding the Universe's Secrets <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">67$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+              <li class="flex items-center">
+                <svg class="w-6 h-6 mr-2 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                <p class="text-left text-lg leading-tight"><b>The Cosmic Voyager</b>: Astral Transcendence <i class="text-sm ml-1 whitespace-nowrap">[NORMAL PRICE: <s class="">47$</s> <b>|</b> <span class="text-green-500 font-bold">TODAY FREE</span>]</i></p>
+              </li>
+            </ul>
+          </div>
+
+          <a href="https://www.brainsyncproject.shop/
+          " class="button block py-6 px-4 shadow-md bg-gradient-to-b from-[#fee5a1] to-[#cca05e] text-black font-bold text-xl md:text-2xl w-full rounded-3xl shadow transition duration-750 hover:scale-110 cursor-pointer mt-10 border-b-4 border-[#83663b]" ><span class="drop-shadow">Tap here to unlock your bioenergetic potential!</span></a>
+          <img class="max-w-full mx-auto mt-2 laz" src="img/pay-1-1.webp" alt="payment_methods">
+          <a href="https://www.brainsyncproject.shop/
+          " class="text-blue-500 underline block mt-3">Click here to buy "BrainSync Project" in your local currency</a>
+          <p class="text-zinc-200 mt-16 text-sm italic">*This offer may expire at any time</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section id="section3" class="py-8 md:py-16 bg-white text-black">
+      <div class="container max-w-3xl px-4 md:px-0 mx-auto">
+        <div class="flex flex-col md:flex-row justify-center items-center md:items-start gap-8 ">
+          <div class="w-full md:w-1/3 text-center md:text-start">
+            <h3 class="text-3xl font-extrabold text-gray-800">COMMON QUESTIONS</h3>
+          </div>
+          <div class="w-full md:w-2/3">
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>WHEN WILL I BEGIN SEEING RESULTS?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Most users report substantial shifts within the first few frequency sessions. And usually, within 20 days (as Robert), the most profound changes begin to manifest. Immediately upon starting the audio, you'll feel a sense of calm, tranquillity, and a connection to something bigger.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>HOW OFTEN SHOULD I LISTEN TO THE AUDIO?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Once or twice a day is sufficient, it is up to you and your routine! Here's an advice: you can listen to the frequencies after waking up and before bed.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>IS THE PAYMENT SECURE?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Your purchase will be processed in a secured Hotmart checkout page. Hotmart, an utterly trustworthy payment gateway, utilizes some of the globe's most sophisticated data encryption technologies, guaranteeing 100% security of your details. Hotmart is entrusted by colossal platforms like Amazon, Walmart, and Apple. This is what you will receive if you decide to take action now.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>THERE IS A GUARANTEE?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Yes, we have created a 7 day no risk guarantee.</p>
+                <p class="text-sm mt-2">It is a no-risk guarantee, because if after 7 days you are not surprised by the synchronicities that every day starts to happen in your life, we will refund 100% of what you invested. NO QUESTIONS ASKED</p>
+                <p class="text-sm mt-2">YOU HAVE NOTHING TO LOSE, BUT A LOT TO GAIN!</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>WHEN WILL I RECEIVE THE PAYMENT?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Right after your purchase, an email will be sent with your access details and a e-mail for your queries.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>IS IT A ONE-TIME PAYMENT?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">YES.</p>
+                <p class="text-sm mt-2">With a single payment of US$39.00, you'll gain instant access to all BrainSync Project frequencies and the above-mentioned bonuses.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>CAN I PURCHASE THIS PRODUCT FROM ANY COUNTRY?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Absolutely, it's available for purchase globally. But you need to pay attention because issues may arise with your credit or debit card as some banks disable online transactions for security purposes. If your card is declined, please contact your bank to enable secure online transactions.</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>WHAT ARE MY PAYMENT OPTIONS?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">You can pay using options like Debit Card, Credit Card and PayPal and others. All proceedings take place on Hotmart, one of the biggest platforms in the world!</p>
+                <p class="text-sm mt-2">Besides that, you have a 7-day risk-free guarantee. If, after 7 days, you're not thrilled by the progressive changes in your life, we'll return every penny of your investment without any difficulties!</p>
+              </div>
+
+              <button class="accordion flex items-center justify-start w-full p-5 gap-2 font-medium text-left text-white bg-gray-800 hover:bg-gray-900 mt-1">
+                <svg data-accordion-icon class="w-3 h-3 rotate-90 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+                </svg>
+                <span>IS CUSTOMER SUPPORT INCLUDED?</span>
+              </button>
+              <div class="panel py-4 px-8 hidden">
+                <p class="text-sm">Certainly! We have a dedicated support team via email. The best part is that our support team also successfully completed the course and are changing their lives, and are here to help you change yours. We are devoted to assisting individuals who seek spiritual awakening.</p>
+              </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <footer class="py-8 bg-black text-white border-t border-zinc-900">
+      <div class="container max-w-3xl mx-auto px-4 md:px-0 text-center">
+        <p class="text-sm font-bold">BrainSync Project ® All rights reserved 2024.</p>
+        <ul class="flex justify-center items-center text-white text-xs mt-4 gap-4 underline">
+          <li>
+            <a href="../../contact/index.html" target="_blank" style="color:white;">Contact Us</a>
+          </li>
+          <li>
+            <a href="../../policy/index.html" target="_blank" style="color:white;">Privacy</a>
+          </li>
+          <li>
+            <a href="../../terms/index.html" target="_blank" style="color:white;">Terms</a>
+          </li>
+          <li>
+            <a href="../../refund/index.html" target="_blank" style="color:white;">Refund</a>
+          </li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-4">This site is not part of or endorsed by Facebook ™️. Facebook ™️ is a trademark of Facebook ™️ Inc. The results listed above are my personal results and those of my students. At the end of this no-cost initial training I will give people the opportunity to access an advanced program that will help them implement and go even deeper into the subject matter. This is completely optional.</p>
+      </div>
+    </footer>
+
+    <script src="js/accordion.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="https://buygoods.com/js/facebook_link_manager.js"></script>
+
+    <script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+  </body>
+</html>
